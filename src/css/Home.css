@@ -15,13 +15,14 @@
   height: 100%;
 }
 
+.LogIn{
+  width: 50%;
+  height: 100%;
+}
+
 .Hamburger img{
   height: 100%;
   width: 100%;
   object-fit: cover;
 }
 
-.LogIn{
-  width: 50%;
-  height: 100%;
-}

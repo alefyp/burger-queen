@@ -6,27 +6,21 @@ import waiter from '../media/waiter.jpg'
 
 const SelectRol = () => {
   return (
-    <div className="flex-center select-rol-container" >
-      <FloatLogo />
-      <h2>Selecciona tu rol:</h2>
-      <div className="not-found">
-        <div className="select-rol">
+    <div className="Select-rol">
+      <h1>Selecciona tu rol:</h1>
+
+      <div className="rol-options-container">
+        <div className="rol-option">
           <img src={chef} className="rol-option-img" />
-          <div className="rol-option-overlay">
-            <p>
-              Cocinero
-            </p>
-          </div>
+          <button>Cocinero</button>
         </div>
-        <div className="select-rol">
+        <div className="rol-option">
           <img src={waiter} className="rol-option-img" />
-          <div className="rol-option-overlay">
-            <p>Mesero</p>
-          </div>
+          <button>Mesero</button>
         </div>
       </div>
-    </div>
 
+    </div>
   );
 }
 
