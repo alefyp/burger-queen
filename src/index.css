@@ -20,8 +20,19 @@ body {
 h1, h2, h3 {
   font-family: 'Finger Paint', cursive;
   margin: 0;
+  text-align: center;
   line-height: 95%;
 }
+
+h1{
+  font-size: 7vw;
+}
+
+h2{
+  font-size: 3vw;
+}
+
+
 
 h4, p {
   font-family: 'Open Sans', sans-serif;

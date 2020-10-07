@@ -2,25 +2,33 @@ import React from "react";
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link,
-  Redirect,
-  useHistory,
-  useLocation
+  Route
 } from "react-router-dom";
 import Home from './Home';
 import SelectRol from './SelectRol';
 import NotFound from './NotFound';
+import Waiter from './Waiter';
+import Chef from './Chef';
+
+
 
 const Routing = () => {
+  //Aquí va mi código de autenticación
+
   return (
     <Router>
       <Switch>
         <Route exact path="/">
           <Home />
         </Route>
-        <Route exact path="/auth">
+        <Route exact path="/rol">
           <SelectRol />
+        </Route>
+        <Route exact path="/rol/waiter">
+          <Waiter />
+        </Route>
+        <Route exact path="/rol/chef">
+          <Chef />
         </Route>
         <Route path="*">
           <NotFound />

@@ -7,11 +7,6 @@
   justify-content: center;
 }
 
-.Login-header h1{
-  text-align: center;
-  font-size: 7vw;
-  line-height: 95%;
-}
 
 .LoginForm{
   display: flex;
