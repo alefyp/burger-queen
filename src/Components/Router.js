@@ -24,10 +24,10 @@ const Routing = () => {
         <Route exact path="/rol">
           <SelectRol />
         </Route>
-        <Route exact path="/rol/waiter">
+        <Route path="/rol/waiter">
           <Waiter />
         </Route>
-        <Route exact path="/rol/chef">
+        <Route path="/rol/chef">
           <Chef />
         </Route>
         <Route path="*">

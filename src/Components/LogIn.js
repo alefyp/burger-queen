@@ -9,12 +9,13 @@ const LogIn = () => {
 
   let history = useHistory();
 
-  //Aquí voy a hacer mi función de autorización
+
   function checkAuthentication(event) {
     event.preventDefault();
     //stop the form from submitting
     console.log('soy un usuario: ', name);
     //get the mail and password
+    //I guess the auth function starts here lol 
     history.push("/rol");
   }
 
@@ -39,7 +40,7 @@ const LogIn = () => {
             name="name"
             autoComplete="name"
             placeholder="Alefy"
-
+            // separar
             required
             onChange={(e) => setName(e.target.value)}
           />
@@ -81,3 +82,5 @@ const LogIn = () => {
 };
 
 export default LogIn;
+
+//separar más
