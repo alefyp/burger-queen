@@ -3,7 +3,7 @@ import React from 'react';
 
 const Waiter = () => {
   return (
-    <div className="not-found">
+    <div className="center-page">
       <h1>Waiter's table</h1>
     </div>
   );

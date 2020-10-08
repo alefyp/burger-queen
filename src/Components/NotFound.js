@@ -3,7 +3,7 @@ import '../css/NotFound.css';
 
 const NotFound = () => {
   return (
-    <div className="not-found">
+    <div className="center-page">
       <h1>Page not found!</h1>
     </div>
   );

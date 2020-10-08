@@ -5,9 +5,8 @@ import { useParams } from 'react-router-dom';
 const Chef = () => {
 
   return (
-    <div className="not-found">
+    <div className="center-page">
       <h1>Chef's config</h1>
-      <h2>{rolId}</h2>
     </div>
   );
 }
