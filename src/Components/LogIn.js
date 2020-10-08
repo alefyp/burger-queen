@@ -3,109 +3,81 @@ import '../css/Login.css';
 
 import { useHistory } from "react-router-dom";
 
-class LogIn extends React.Component {
-  checkAuthentication = (event) => {
+
+
+const LogIn = () => {
+
+  let history = useHistory();
+
+  //Aquí voy a hacer mi función de autorización
+  function checkAuthentication(event) {
     event.preventDefault();
-    console.log("Un empleado entrando wiowiowio");
+    //stop the form from submitting
+    console.log('soy un usuario: ', name);
+    //get the mail and password
+    history.push("/rol");
   }
-  render() {
-    return (
-      <div className="LogIn">
-        <header className="Login-header">
-          <h1>Burger Queen!</h1>
-        </header>
 
-        <form className="LoginForm" onSubmit={this.checkAuthentication}>
-          <label htmlFor="email">
-            Correo electrónico:
+  const [recoverLink, setRecover] = useState(""); //cuando haga auth
+  const [name, setName] = useState("");
+  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("");
+
+  return (
+    <div className="LogIn">
+      <header className="Login-header">
+        <h1>Burger Queen!</h1>
+      </header>
+
+      <form className="LoginForm" onSubmit={checkAuthentication}>
+        <label htmlFor="name">
+          Nombre:
             <input
-              id="email"
-              type="text"
-              name="Email"
-              autoComplete="username"
-              placeholder="example@gmail.com"
-              required
-            />
-          </label>
-          <label htmlFor="password">
-            Contraseña:
+            id="name"
+            value={name}
+            type="text"
+            name="name"
+            autoComplete="name"
+            placeholder="Alefy"
+
+            required
+            onChange={(e) => setName(e.target.value)}
+          />
+        </label>
+        <label htmlFor="email">
+          Correo electrónico:
             <input
-              id="password"
-              type="password"
-              name="password"
-              placeholder="******"
-              required
-              autoComplete="current-password"
-            />
+            id="email"
+            value={email}
+            type="text"
+            name="Email"
+            autoComplete="username"
+            placeholder="example@gmail.com"
 
-          </label>
-          <button type="submit">Entrar</button>
-        </form>
-        <a href="">Olvidé mi contraseña </a>
-      </div>
-    );
-  }
-}
+            required
+            onChange={(e) => setEmail(e.target.value)}
+          />
+        </label>
+        <label htmlFor="password">
+          Contraseña:
+            <input
+            id="password"
+            value={password}
+            type="password"
+            name="password"
+            placeholder="******"
+            required
+            autoComplete="current-password"
+            onChange={(e) => setPassword(e.target.value)}
+          />
 
+        </label>
+        <button type="submit">Entrar</button>
+      </form>
+      <a href={recoverLink}>Olvidé mi contraseña </a>
+    </div>
 
-// const LogIn = () => {
-
-//   let history = useHistory();
-
-//   //Aquí voy a hacer mi función de autorización
-//   function checkAuthentication(event) {
-//     event.preventDefault();
-//     //stop the form from submitting
-//     console.log('soy un usuario')
-//     //get the mail and password
-//     history.push("/rol");
-//   }
-
-//   const [recoverLink, setRecover] = useState("");
-//   const [password, setPassword] = useState("");
-//   const [email, setEmail] = useState("");
-
-//   return (
-//     <div className="LogIn">
-//       <header className="Login-header">
-//         <h1>Burger Queen!</h1>
-//       </header>
-
-//       <form className="LoginForm" onSubmit={checkAuthentication}>
-//         <label htmlFor="email">
-//           Correo electrónico:
-//             <input
-//             id="email"
-//             value={email}
-//             type="text"
-//             name="Email"
-//             autoComplete="username"
-//             placeholder="example@gmail.com"
-
-//             required
-//             onChange={(e) => setEmail(e.target.value)}
-//           />
-//         </label>
-//         <label htmlFor="password">
-//           Contraseña:
-//             <input
-//             id="password"
-//             value={password}
-//             type="password"
-//             name="password"
-//             placeholder="******"
-//             required
-//             autoComplete="current-password"
-//             onChange={(e) => setPassword(e.target.value)}
-//           />
-
-//         </label>
-//         <button type="submit">Entrar</button>
-//       </form>
-//       <a href={recoverLink}>Olvidé mi contraseña </a>
-//     </div>
-
-//   );
-// };
+  );
+};
 
 export default LogIn;

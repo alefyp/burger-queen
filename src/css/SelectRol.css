@@ -30,6 +30,7 @@
   margin: 15px 5px;
   position: relative;
   text-align: center;
+  list-style: none;
 }
 
 .rol-option button{
