@@ -18,19 +18,7 @@ const Chef = () => {
 
   return (
     <div className="main-view">
-      <MenuBar pathoptions={["Neworder", "Orderstate", "Wepa"]} employee={'Alejandra'} />
-
-      <Switch>
-        <Route path={`${url}/Neworder`}>
-          <h1> hola</h1>
-        </Route>
-        <Route path={`${url}/OrderState`}>
-          <h1>ayuda con esto</h1>
-        </Route>
-        <Route path={`${url}/Wepa`}>
-          <Wepa />
-        </Route>
-      </Switch>
+      <p>nada por ahora</p>
     </div>
   );
 }

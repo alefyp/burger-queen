@@ -28,13 +28,13 @@ const MenuBar = (props) => {
         <Link to={`${url}/${props.pathoptions[1]}`}>Estado de pedidos</Link>
       </li>
       <li>
-        <Link to={`${url}/${props.pathoptions[2]}`}>Alguna cosa más adelante</Link>
+        <Link to="/rol">Cambiar Rol</Link>
       </li>
       <li>
         <p>Activo como: <h3>{props.employee}</h3></p>
       </li>
       <li>
-        <button>Cerrar sesión</button>
+        <Link to="/">Cerrar Sesión</Link>
       </li>
 
 
