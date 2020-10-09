@@ -31,7 +31,7 @@ const MenuBar = (props) => {
         <Link to="/rol">Cambiar Rol</Link>
       </li>
       <li>
-        <p>Activo como: <h3>{props.employee}</h3></p>
+        <p>Activo como: <span>{props.employee}</span></p>
       </li>
       <li>
         <Link to="/">Cerrar Sesión</Link>

@@ -13,7 +13,7 @@ import {
   useParams
 } from "react-router-dom";
 
-const Waiter = () => {
+const Waiter = (props) => {
   let { url } = useRouteMatch();
 
   return (
