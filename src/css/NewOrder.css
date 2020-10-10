@@ -1,12 +1,29 @@
 .add-new-order{
-  height: 100vh;
-  width: 80%;
-   background-color: rgba(217, 231, 191, 0.356);
-   display: flex;
-   flex-direction: row;
+  background-color: rgba(192, 9, 196, 0.356);
+  display: flex;
+  flex-direction: row;
+  width: 100%;
 }
 
 .new-order{
-  background-color: violet;
-  width: 80%;
+  background-color: rgb(212, 27, 27);
+  width: 65%;
+  height: 100%;
+  padding: 3%;
 }
+
+.new-order-header{
+  height: 15%;
+  background-color: tomato;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-meal-option{
+  height: 5%;
+}
+
+
+/* fooditems height 80% */

@@ -14,11 +14,22 @@ const NewOrder = () => {
   return (
     <div className="add-new-order">
       <div className="new-order">
-        <h1> Nueva orden</h1>
-        <button onClick={() => setMeal("breakfast")}>Desayuno</button>
-        <button onClick={() => setMeal("lunch")}>Lunch</button>
+        <div className="new-order-header">
+          <h2> Añadir items: </h2>
+          <form>
+            <label>
+              Cliente:
+            <input id="client-name" type="text" />
+            </label>
+          </form>
+        </div>
+
+        <button className="button-meal-option" onClick={() => setMeal("breakfast")}>Desayuno</button>
+        <button className="button-meal-option" onClick={() => setMeal("lunch")}>Lunch</button>
+
         <FoodItem items={items} meal={meal} />
       </div>
+
       <div className="client-bill">
         La factura
       </div>

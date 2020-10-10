@@ -6,7 +6,7 @@ export const FoodItem = (props) => {
   const list = props.items[props.meal];
 
   const listItems = list.map((e) => <li key={e.name}>
-    <h3>{e.name}</h3>
+    <h4>{e.name}</h4>
     <p>Precio: {e.price}</p>
     <img className="item-img" src={process.env.PUBLIC_URL + e.img} />
 
