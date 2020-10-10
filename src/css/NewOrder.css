@@ -1,0 +1,12 @@
+.add-new-order{
+  height: 100vh;
+  width: 80%;
+   background-color: rgba(217, 231, 191, 0.356);
+   display: flex;
+   flex-direction: row;
+}
+
+.new-order{
+  background-color: violet;
+  width: 80%;
+}

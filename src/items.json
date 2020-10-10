@@ -8,24 +8,69 @@
     {
       "name": "Café con Leche",
       "price": 5,
-      "img": "./path"
+      "img": "/cafe_americano.jpg"
     },
     {
       "name": "Sandwich de jamón y queso",
       "price": 5,
-      "img": "/logo512.png"
+      "img": "/cafe_americano.jpg"
     },
     {
       "name": "Jugo de frutas natural",
       "price": 5,
-      "img": "./path"
+      "img": "/cafe_americano.jpg"
     }
   ],
   "lunch": [
     {
       "name": "Hamburguesa Simple",
+      "price": 10,
+      "img": "/cafe_americano.jpg",
+      "type": [
+        "Res",
+        "Pollo",
+        "Vegetariana"
+      ]
+    },
+    {
+      "name": "Hamburguesa Doble",
+      "price": 15,
+      "img": "/cafe_americano.jpg",
+      "type": [
+        "Res",
+        "Pollo",
+        "Vegetariana"
+      ]
+    },
+    {
+      "name": "Papas Fritas",
       "price": 5,
-      "img": "./path"
+      "img": "/cafe_americano.jpg"
+    },
+    {
+      "name": "Aros de Cebolla",
+      "price": 5,
+      "img": "/cafe_americano.jpg"
+    },
+    {
+      "name": "Agua 500ml",
+      "price": 5,
+      "img": "/cafe_americano.jpg"
+    },
+    {
+      "name": "Agua 750ml",
+      "price": 7,
+      "img": "/cafe_americano.jpg"
+    },
+    {
+      "name": "Gaseosa 500ml",
+      "price": 7,
+      "img": "/cafe_americano.jpg"
+    },
+    {
+      "name": "Gaseosa 750ml",
+      "price": 10,
+      "img": "/cafe_americano.jpg"
     }
   ]
 }

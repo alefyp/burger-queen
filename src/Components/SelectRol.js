@@ -22,7 +22,7 @@ const SelectRol = () => {
         </li>
         <li className="rol-option">
           <img src={waiter} className="rol-option-img" alt="waiter" />
-          <Link to={`${url}/waiter`}>Mesero</Link>
+          <Link to={`${url}/waiter/neworder`}>Mesero</Link>
         </li>
       </ul>
     </div>
