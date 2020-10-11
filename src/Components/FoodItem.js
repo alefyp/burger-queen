@@ -17,8 +17,7 @@ export const FoodItem = (props) => {
     clientOrder[name] = clientOrder[name] + 1 || 1;
   }
 
-
-  // const [clientOrder, setClientOrder] = useState({ clientOrder });
+  const [clientOrder, setClientOrder] = useState({ clientOrder });
   const [burgertype, setBurgertype] = useState("Res");
 
   const listItems = list.map((e) => <li key={(e.name).replaceAll(" ", "").toLowerCase()} onClick={() => addItem(e.name)}>
