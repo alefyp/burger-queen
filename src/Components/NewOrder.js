@@ -13,18 +13,26 @@ const NewOrder = () => {
   const [clientOrder, setClientOrder] = useState({});
   const [burgertype, setBurgertype] = useState("Res");
   const [meal, setMeal] = useState("breakfast");
+  const [clientName, setClientName] = useState("Burger lover")
 
 
 
-  function addItem(name) {
+  function addItem(name, price) {
+
     clientOrder[name] = clientOrder[name] + 1 || 1;
-    setClientOrder(clientOrder);
-    console.log(clientOrder);
+    setClientOrder({ ...clientOrder });
+
+    // clientOrder[name] = { quantity: clientOrder[name] + 1 || 1, price };
+    // setClientOrder({ ...clientOrder });
+
+
+    // clientOrder[name] = { quantity: clientOrder[name].quantity + 1, price };
+    // setClientOrder({ ...clientOrder });
   }
 
   const list = items[meal];
 
-  const listItems = list.map((e) => <li key={(e.name).replaceAll(" ", "").toLowerCase()} onClick={() => addItem(e.name)}>
+  const listItems = list.map((e) => <li key={(e.name).replaceAll(" ", "").toLowerCase()} onClick={() => addItem(e.name, e.price)}>
     <img className="item-img" src={process.env.PUBLIC_URL + e.img} />
     <div className="item-description">
       <h4>{e.name}</h4>
@@ -73,10 +81,13 @@ const NewOrder = () => {
       </div>
 
       <div className="client-bill">
-        Aquí va: {Object.keys(clientOrder).map((e) => <p key={e}>{e}, cantidad: {clientOrder[e]}</p>)}
+        Aquí va: {Object.keys(clientOrder).map((e) => <p key={e}>{e}, cantidad: {clientOrder[e]}</p>
+      )}
+        <p>----------</p>
+
       </div>
 
-    </div>
+    </div >
   );
 }
 
