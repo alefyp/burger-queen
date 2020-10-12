@@ -6,48 +6,28 @@ import '../css/FoodItem.css';
 import '../css/NewOrder.css';
 import items from '../items.json'
 
-
 const NewOrder = () => {
 
-
-  const [clientOrder, setClientOrder] = useState({});
-  const [burgertype, setBurgertype] = useState("Res");
-  const [meal, setMeal] = useState("breakfast");
-  const [clientName, setClientName] = useState("Burger lover")
-
-
+  const [clientOrder, setClientOrder] = useState({}); //aquí va la orden generada
+  const [burgertype, setBurgertype] = useState("Res"); //todavía no lo de las hamburgesas xd
+  const [meal, setMeal] = useState("breakfast"); //aquí es para ver los dos menús
+  const [clientName, setClientName] = useState("Burger lover"); //Va para el form del nombre del cliente
 
   function addItem(name) {
-
     clientOrder[name] = clientOrder[name] + 1 || 1;
-
     setClientOrder({ ...clientOrder });
-
-    // clientOrder[name] = { quantity: clientOrder[name] + 1 || 1, price };
-    // setClientOrder({ ...clientOrder });
-
-
-    // clientOrder[name] = { quantity: clientOrder[name].quantity + 1, price };
-    // setClientOrder({ ...clientOrder });
-    console.log(clientOrder)
+    console.log(clientOrder);
   }
 
   function removeItem(name) {
-    console.log('Estoy borrando!');
     clientOrder[name] = clientOrder[name] - 1;
-
     if (clientOrder[name] <= 0) {
-      delete clientOrder[name]
+      delete clientOrder[name];
     }
-
-
     setClientOrder({ ...clientOrder });
-    console.log(clientOrder)
   }
 
-  const list = items[meal];
-
-  const listItems = list.map((e) => <li key={(e.name).replaceAll(" ", "").toLowerCase()} onClick={() => addItem(e.name, e.price)}>
+  const listItems = items[meal].map((e) => <li key={(e.name).replaceAll(" ", "").toLowerCase()} onClick={() => addItem(e.name, e.price)}>
     <img className="item-img" src={process.env.PUBLIC_URL + e.img} />
     <div className="item-description">
       <h4>{e.name}</h4>
@@ -98,9 +78,7 @@ const NewOrder = () => {
       <ul className="client-bill">
         Aquí va: {Object.keys(clientOrder).map((e) => <li key={e}>{e}, cantidad: {clientOrder[e]}<button onClick={() => removeItem(e)}>x</button></li>)}
       </ul>
-
     </div >);
-
 }
 
 export default NewOrder;

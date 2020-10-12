@@ -1,77 +1,156 @@
 {
-  "breakfast": [
-    {
-      "name": "Café Americano",
-      "id": 1,
-      "price": 5,
-      "img": "/cafe_americano.jpg"
-    },
-    {
-      "name": "Café con Leche",
-      "price": 5,
-      "img": "/cafe_americano.jpg"
-    },
-    {
-      "name": "Sandwich de jamón y queso",
-      "price": 5,
-      "img": "/cafe_americano.jpg"
-    },
-    {
-      "name": "Jugo de frutas natural",
-      "price": 5,
-      "img": "/cafe_americano.jpg"
-    }
-  ],
-  "lunch": [
-    {
-      "name": "Hamburguesa Simple",
-      "price": 10,
-      "img": "/cafe_americano.jpg",
-      "type": [
-        "Res",
-        "Pollo",
-        "Vegetariana"
-      ]
-    },
-    {
-      "name": "Hamburguesa Doble",
-      "price": 15,
-      "img": "/cafe_americano.jpg",
-      "type": [
-        "Res",
-        "Pollo",
-        "Vegetariana"
-      ]
-    },
-    {
-      "name": "Papas Fritas",
-      "price": 5,
-      "img": "/cafe_americano.jpg"
-    },
-    {
-      "name": "Aros de Cebolla",
-      "price": 5,
-      "img": "/cafe_americano.jpg"
-    },
-    {
-      "name": "Agua 500ml",
-      "price": 5,
-      "img": "/cafe_americano.jpg"
-    },
-    {
-      "name": "Agua 750ml",
-      "price": 7,
-      "img": "/cafe_americano.jpg"
-    },
-    {
-      "name": "Gaseosa 500ml",
-      "price": 7,
-      "img": "/cafe_americano.jpg"
-    },
-    {
-      "name": "Gaseosa 750ml",
-      "price": 10,
-      "img": "/cafe_americano.jpg"
-    }
-  ]
+  "Café Americano": {
+    "id": "cafe_americano",
+    "name": "Café Americano",
+    "price": 5,
+    "img": "/cafe_americano.jpg",
+    "menu": [
+      "breakfast"
+    ],
+    "type": [
+      "drink"
+    ]
+  },
+  "Café con Leche": {
+    "id": "cafe_con_leche",
+    "name": "Café con leche",
+    "price": 5,
+    "img": "/cafe_americano.jpg",
+    "menu": [
+      "breakfast"
+    ],
+    "type": [
+      "drink"
+    ]
+  },
+  "Sandwich de jamón y queso": {
+    "id": "sandwich_de_jamon_y_queso",
+    "name": "Sandwich de jamón y queso",
+    "price": 5,
+    "img": "/cafe_americano.jpg",
+    "menu": [
+      "breakfast"
+    ],
+    "type": [
+      "food"
+    ]
+  },
+  "Jugo de frutas natural": {
+    "id": "jugo_de_frutas_natural",
+    "name": "Jugo de frutas natural",
+    "price": 5,
+    "img": "/cafe_americano.jpg",
+    "menu": [
+      "breakfast"
+    ],
+    "type": [
+      "drink"
+    ]
+  },
+  "Hamburguesa simple": {
+    "id": "hamburguesa_simple",
+    "name": "Hamburguesa simple",
+    "price": 10,
+    "img": "/cafe_americano.jpg",
+    "menu": [
+      "lunch"
+    ],
+    "type": [
+      "food"
+    ],
+    "class": [
+      "res",
+      "pollo",
+      "vegetariana"
+    ]
+  },
+  "Hamburguesa doble": {
+    "id": "hamburguesa_doble",
+    "name": "Hamburguesa doble",
+    "price": 15,
+    "img": "/cafe_americano.jpg",
+    "menu": [
+      "lunch"
+    ],
+    "type": [
+      "food"
+    ],
+    "class": [
+      "res",
+      "pollo",
+      "vegetariana"
+    ]
+  },
+  "Papas fritas": {
+    "id": "papas_fritas",
+    "name": "Papas fritas",
+    "price": 5,
+    "img": "/cafe_americano.jpg",
+    "menu": [
+      "lunch"
+    ],
+    "type": [
+      "complement"
+    ]
+  },
+  "Aros de cebolla": {
+    "id": "aros_de_cebolla",
+    "name": "Aros de Cebolla",
+    "price": 5,
+    "img": "/cafe_americano.jpg",
+    "menu": [
+      "lunch"
+    ],
+    "type": [
+      "complement"
+    ]
+  },
+  "Agua 500 ml": {
+    "id": "agua_500ml",
+    "name": "Agua 500ml",
+    "price": 5,
+    "img": "/cafe_americano.jpg",
+    "menu": [
+      "lunch"
+    ],
+    "type": [
+      "drink"
+    ]
+  },
+  "Agua 750 ml": {
+    "id": "agua_750ml",
+    "name": "Agua 750ml",
+    "price": 7,
+    "img": "/cafe_americano.jpg",
+    "menu": [
+      "lunch"
+    ],
+    "type": [
+      "drink"
+    ]
+  },
+  "Gaseosa 500ml": {
+    "id": "gaseosa_500ml",
+    "name": "Gaseosa 500ml",
+    "price": 7,
+    "img": "/cafe_americano.jpg",
+    "menu": [
+      "lunch"
+    ],
+    "type": [
+      "drink"
+    ]
+  },
+  "Gaseosa 750 ml": {
+    "id": "gaseosa_750ml",
+    "name": "Gaseosa 750ml",
+    "price": 7,
+    "img": "/cafe_americano.jpg",
+    "menu": [
+      "lunch"
+    ],
+    "type": [
+      "drink"
+    ]
+  }
 }
