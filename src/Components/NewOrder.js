@@ -17,9 +17,10 @@ const NewOrder = () => {
 
 
 
-  function addItem(name, price) {
+  function addItem(name) {
 
     clientOrder[name] = clientOrder[name] + 1 || 1;
+
     setClientOrder({ ...clientOrder });
 
     // clientOrder[name] = { quantity: clientOrder[name] + 1 || 1, price };
@@ -28,6 +29,20 @@ const NewOrder = () => {
 
     // clientOrder[name] = { quantity: clientOrder[name].quantity + 1, price };
     // setClientOrder({ ...clientOrder });
+    console.log(clientOrder)
+  }
+
+  function removeItem(name) {
+    console.log('Estoy borrando!');
+    clientOrder[name] = clientOrder[name] - 1;
+
+    if (clientOrder[name] <= 0) {
+      delete clientOrder[name]
+    }
+
+
+    setClientOrder({ ...clientOrder });
+    console.log(clientOrder)
   }
 
   const list = items[meal];
@@ -80,15 +95,12 @@ const NewOrder = () => {
         <ul className="menu-list">{listItems}</ul>
       </div>
 
-      <div className="client-bill">
-        Aquí va: {Object.keys(clientOrder).map((e) => <p key={e}>{e}, cantidad: {clientOrder[e]}</p>
-      )}
-        <p>----------</p>
+      <ul className="client-bill">
+        Aquí va: {Object.keys(clientOrder).map((e) => <li key={e}>{e}, cantidad: {clientOrder[e]}<button onClick={() => removeItem(e)}>x</button></li>)}
+      </ul>
 
-      </div>
+    </div >);
 
-    </div >
-  );
 }
 
 export default NewOrder;
