@@ -17,14 +17,22 @@ const NewOrder = () => {
   const [clientOrder, setClientOrder] = useState({}); //aquí va la orden generada
 
 
-  const addItem = (item) => {
-    clientOrder[item] = clientOrder[item] + 1 || 1;
+  const addItem = (item, price) => {
+    if (clientOrder[item]) {
+      clientOrder[item].quantity += 1;
+    } else {
+      clientOrder[item] = { quantity: 1, price: price };
+
+    }
     setClientOrder({ ...clientOrder });
+
+
+    console.log(clientOrder)
   }
 
   const removeItem = (item) => {
-    clientOrder[item] = clientOrder[item] - 1;
-    if (clientOrder[item] <= 0) {
+    clientOrder[item].quantity = clientOrder[item].quantity - 1;
+    if (clientOrder[item].quantity <= 0) {
       delete clientOrder[item];
     }
     setClientOrder({ ...clientOrder });
@@ -39,11 +47,13 @@ const NewOrder = () => {
       <button onClick={() => setMeal("lunch")}>Almuerzo & Cena</button>
 
       <List items={items} meal={meal} addItem={addItem} />
-      <Bill order={clientOrder} items={items} />
+      <Bill order={clientOrder} items={items} removeItem={removeItem} />
+
     </div>
   );
 
 }
+
 
 
 
