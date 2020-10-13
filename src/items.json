@@ -8,7 +8,7 @@
       "breakfast"
     ],
     "type": [
-      "drink"
+      "Bebida"
     ]
   },
   "Café con Leche": {
@@ -20,7 +20,7 @@
       "breakfast"
     ],
     "type": [
-      "drink"
+      "Bebida"
     ]
   },
   "Sandwich de jamón y queso": {
@@ -32,7 +32,7 @@
       "breakfast"
     ],
     "type": [
-      "food"
+      "Comida"
     ]
   },
   "Jugo de frutas natural": {
@@ -44,7 +44,7 @@
       "breakfast"
     ],
     "type": [
-      "drink"
+      "Bebida"
     ]
   },
   "Hamburguesa simple": {
@@ -56,7 +56,7 @@
       "lunch"
     ],
     "type": [
-      "food"
+      "Comida"
     ],
     "class": [
       "res",
@@ -73,7 +73,7 @@
       "lunch"
     ],
     "type": [
-      "food"
+      "Comida"
     ],
     "class": [
       "res",
@@ -90,7 +90,7 @@
       "lunch"
     ],
     "type": [
-      "complement"
+      "Complemento"
     ]
   },
   "Aros de cebolla": {
@@ -102,7 +102,7 @@
       "lunch"
     ],
     "type": [
-      "complement"
+      "Complemento"
     ]
   },
   "Agua 500 ml": {
@@ -114,7 +114,7 @@
       "lunch"
     ],
     "type": [
-      "drink"
+      "Bebida"
     ]
   },
   "Agua 750 ml": {
@@ -126,7 +126,7 @@
       "lunch"
     ],
     "type": [
-      "drink"
+      "Bebida"
     ]
   },
   "Gaseosa 500ml": {
@@ -138,7 +138,7 @@
       "lunch"
     ],
     "type": [
-      "drink"
+      "Bebida"
     ]
   },
   "Gaseosa 750 ml": {
@@ -150,7 +150,7 @@
       "lunch"
     ],
     "type": [
-      "drink"
+      "Bebida"
     ]
   }
 }

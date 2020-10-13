@@ -33,7 +33,11 @@ li, a{
   color: white;
   list-style: none;
   text-decoration: none;
-  font-size: 24px;
+  font-size: 18px;
   text-align: center;
+}
+
+.menu-bar p{
+  font-size: 18px;
 }
 

@@ -9,7 +9,7 @@ const Bill = (props) => {
   const list = orderElements.map((e) => {
     console.log(orderElements, props.order)
     return (
-      <li className="black" key={e} >
+      <li key={e} >
         {e}, cantidad: {props.order[e].quantity}, total= {props.order[e].quantity * props.order[e].price}
         <button onClick={(() => { props.removeItem(e) })}>x</button>
       </li>
