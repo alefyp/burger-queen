@@ -37,10 +37,6 @@ const NewOrder = () => {
     setClientOrder({ ...clientOrder });
   }
 
-
-
-
-
   return (
     <div className="new-order-container">
       <div className="new-order-add">
@@ -49,7 +45,7 @@ const NewOrder = () => {
 
         <div className="new-order-meal-options">
           <button onClick={() => setMeal("breakfast")}>Desayuno</button>
-          <button onClick={() => setMeal("lunch")}>Almuerzo & Cena</button>
+          <button onClick={() => setMeal("lunch")}>Lunch</button>
         </div>
 
 

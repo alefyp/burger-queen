@@ -8,9 +8,9 @@ const ClientName = (props) => {
         <input
           type="text"
           name="name"
-          placeholder={props.ClientName} />
+          placeholder="Juanito uwu" />
       </label>
-      <input type="submit" value="Submit" />
+      <input className="send-client" type="submit" value=">" />
     </form>
   );
 }

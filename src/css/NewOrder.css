@@ -1,13 +1,16 @@
 .new-order-container{
   display: flex;
   flex-direction: row;
-  background-color: blanchedalmond;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  background-color: rgba(255, 235, 205, 0.178);
   width: 100vw;
   height: 100vh;
+  
 }
 
 .new-order-add{
-  background-color: burlywood;
   width: 75%;
   height: 100vh;
   display: flex;
@@ -16,13 +19,13 @@
 }
 
 .new-order-add h2{
-  background-color: khaki;
-  height: 6%;
+  height: 5%;
+  
 }
 
 .img-item-order{
-  width: 100%;
-  height: 45%;
+  height: 100%;
+  width: 45%;
   object-fit: cover;
 }
 
@@ -31,34 +34,82 @@
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
-  height: 80%;
-  background-color: cadetblue;
+  height: 76%;
+  background-color: rgba(248, 248, 248, 0.068);
   padding: 1%;
   justify-content: flex-start;
   align-content: flex-start;
+  border: 1px solid rgba(128, 128, 128, 0.15);
+  border-radius: 0 0 5px 5px;
+  box-shadow: 0px 0px 39px -15px rgba(0, 0, 0, 0.294);
 }
 
 .list-items{
   background-color: green;
-  width: 18%;
-  height: 40%;
+  display: flex;
+  flex-direction: row;
+  width: 31.15%;
+  height: 25%;
   margin: 1%;
 }
 
 .new-order-meal-options{
-  background-color: hotpink;
   height: 10%;
+  padding-top: 2%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  align-content: flex-end;
+}
+
+
+.new-order-meal-options button{
+  background-color: rgb(255, 38, 0);
+  width: 25%;
+  height: 100%;
+  border: none;
+  border-radius: 0;
+  margin-right: 1%;
+  font-size: 24px;
+  font-weight: 500;
+  border-radius: 5px 5px 0 0;
+  box-shadow: 0px 0px 39px -15px rgba(0,0,0,0.5);
+  
 }
 
 .client-name-form{
-  height: 6%;
-  background-color: indigo;
+  height: 11%;
   display: flex;
-  flex-direction: center;
+  width: 100%;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.client-name-form label{
+  width: 70%;
+  font-size: 24px;
+}
+
+.send-client{
+  background-color: rgba(255, 255, 255, 0.082);
+  height: 75%;
+  width: 20px;
+  
+  align-self: center;
+  margin-left: 5px;
+  border-style: none;
+  text-align: center;
 }
 
 .bill-container{
   width: 25%;
   display: flex;
   flex-direction: column;
+  background-color: rgba(22, 22, 22, 0.9);
+  background-image: url('/background_collage.png');
+  
+  height: 100vh;
 }
