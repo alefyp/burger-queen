@@ -1,7 +1,13 @@
 import React from 'react';
+import { useState } from 'react';
 
 const Bill = (props) => {
-  const list = Object.keys(props.order).map((e) => {
+
+  const orderElements = Object.keys(props.order);
+
+
+  const list = orderElements.map((e) => {
+    console.log(orderElements, props.order)
     return (
       <li className="black" key={e} >
         {e}, cantidad: {props.order[e].quantity}, total= {props.order[e].quantity * props.order[e].price}
@@ -10,8 +16,16 @@ const Bill = (props) => {
     )
   });
 
+  const total = orderElements.reduce((prevTotal, key) => {
+    return prevTotal + props.order[key].quantity * props.order[key].price
+  }, 0);
+
   return (
-    <ul>{list}</ul>
+    <div className="bill-container">
+      <ul>{list}</ul>
+      <h3>Total: ${total}</h3>
+    </div>
+
   );
 }
 

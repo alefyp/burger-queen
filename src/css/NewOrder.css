@@ -1,0 +1,64 @@
+.new-order-container{
+  display: flex;
+  flex-direction: row;
+  background-color: blanchedalmond;
+  width: 100vw;
+  height: 100vh;
+}
+
+.new-order-add{
+  background-color: burlywood;
+  width: 75%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 4%;
+}
+
+.new-order-add h2{
+  background-color: khaki;
+  height: 6%;
+}
+
+.img-item-order{
+  width: 100%;
+  height: 45%;
+  object-fit: cover;
+}
+
+.list-items-container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 80%;
+  background-color: cadetblue;
+  padding: 1%;
+  justify-content: flex-start;
+  align-content: flex-start;
+}
+
+.list-items{
+  background-color: green;
+  width: 18%;
+  height: 40%;
+  margin: 1%;
+}
+
+.new-order-meal-options{
+  background-color: hotpink;
+  height: 10%;
+}
+
+.client-name-form{
+  height: 6%;
+  background-color: indigo;
+  display: flex;
+  flex-direction: center;
+}
+
+.bill-container{
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+}

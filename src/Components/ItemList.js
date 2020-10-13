@@ -9,17 +9,18 @@ const List = (props) => {
   Object.keys(props.items).forEach((e) => {
     if (props.items[e].menu.includes(props.meal)) {
       list.push(
-        <li className="black" key={props.items[e].id} onClick={(() => { props.addItem(props.items[e].name, props.items[e].price) })}>
+        <li className="black list-items" key={props.items[e].id} onClick={(() => { props.addItem(props.items[e].name, props.items[e].price) })}>
+          <img className="img-item-order" src={process.env.PUBLIC_URL + props.items[e].img} />
           <p>Item: {props.items[e].name}</p>
           <p>Precio: ${props.items[e].price} </p>
-          <img src={process.env.PUBLIC_URL + props.items[e].img} />
+
         </li>)
     }
   });
 
 
   return (
-    <ul>{list}</ul>
+    <ul className="list-items-container">{list}</ul>
   );
 }
 

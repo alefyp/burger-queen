@@ -2,7 +2,7 @@ import React from 'react';
 
 const ClientName = (props) => {
   return (
-    <form>
+    <form className="client-name-form">
       <label>
         Cliente:
         <input

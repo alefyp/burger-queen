@@ -20,7 +20,7 @@ const SelectRol = () => {
           <img src={chef} className="rol-option-img" alt="chef" />
           <Link to={`${url}/chef`}>Cocinero</Link>
         </li>
-        <li className="rol-option">
+        <li className="black" className="rol-option">
           <img src={waiter} className="rol-option-img" alt="waiter" />
           <Link to={`${url}/waiter/neworder`}>Mesero</Link>
         </li>
