@@ -41,8 +41,8 @@ const NewOrder = () => {
     <div className="new-order-container">
       <div className="new-order-add">
         <h2>- Nueva orden -</h2>
-        <ClientName name={clientName} />
 
+        <ClientName name={clientName} />
         <div className="new-order-meal-options">
           <button onClick={() => setMeal("breakfast")}>Desayuno</button>
           <button onClick={() => setMeal("lunch")}>Lunch</button>
@@ -51,6 +51,7 @@ const NewOrder = () => {
 
 
         <List items={items} meal={meal} addItem={addItem} />
+
       </div>
 
       <Bill order={clientOrder} items={items} removeItem={removeItem} />

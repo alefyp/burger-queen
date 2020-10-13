@@ -3,7 +3,7 @@
     "id": "cafe_americano",
     "name": "Café Americano",
     "price": 5,
-    "img": "/cafe_americano.jpg",
+    "img": "/images/cafe_americano.jpg",
     "menu": [
       "breakfast"
     ],
@@ -15,7 +15,7 @@
     "id": "cafe_con_leche",
     "name": "Café con leche",
     "price": 5,
-    "img": "/cafe_americano.jpg",
+    "img": "/images/cafe_con_leche.jpg",
     "menu": [
       "breakfast"
     ],
@@ -27,7 +27,7 @@
     "id": "sandwich_de_jamon_y_queso",
     "name": "Sandwich de jamón y queso",
     "price": 5,
-    "img": "/cafe_americano.jpg",
+    "img": "/images/sandwich_de_jamon_y_queso.png",
     "menu": [
       "breakfast"
     ],
@@ -39,7 +39,7 @@
     "id": "jugo_de_frutas_natural",
     "name": "Jugo de frutas natural",
     "price": 5,
-    "img": "/cafe_americano.jpg",
+    "img": "/images/jugo_de_frutas_natural.jpg",
     "menu": [
       "breakfast"
     ],
@@ -51,7 +51,7 @@
     "id": "hamburguesa_simple",
     "name": "Hamburguesa simple",
     "price": 10,
-    "img": "/cafe_americano.jpg",
+    "img": "/images/hamburguesa_simple.jpg",
     "menu": [
       "lunch"
     ],
@@ -68,7 +68,7 @@
     "id": "hamburguesa_doble",
     "name": "Hamburguesa doble",
     "price": 15,
-    "img": "/cafe_americano.jpg",
+    "img": "/images/hamburguesa_doble.jpg",
     "menu": [
       "lunch"
     ],
@@ -85,7 +85,7 @@
     "id": "papas_fritas",
     "name": "Papas fritas",
     "price": 5,
-    "img": "/cafe_americano.jpg",
+    "img": "/images/papas_fritas.jpg",
     "menu": [
       "lunch"
     ],
@@ -97,7 +97,7 @@
     "id": "aros_de_cebolla",
     "name": "Aros de Cebolla",
     "price": 5,
-    "img": "/cafe_americano.jpg",
+    "img": "/images/aros_de_cebolla.jpg",
     "menu": [
       "lunch"
     ],
@@ -109,7 +109,7 @@
     "id": "agua_500ml",
     "name": "Agua 500ml",
     "price": 5,
-    "img": "/cafe_americano.jpg",
+    "img": "/images/agua_500ml.jpg",
     "menu": [
       "lunch"
     ],
@@ -121,7 +121,7 @@
     "id": "agua_750ml",
     "name": "Agua 750ml",
     "price": 7,
-    "img": "/cafe_americano.jpg",
+    "img": "/images/agua_750ml.jpg",
     "menu": [
       "lunch"
     ],
@@ -133,7 +133,7 @@
     "id": "gaseosa_500ml",
     "name": "Gaseosa 500ml",
     "price": 7,
-    "img": "/cafe_americano.jpg",
+    "img": "/images/gaseosa_500ml.jpg",
     "menu": [
       "lunch"
     ],
@@ -145,7 +145,7 @@
     "id": "gaseosa_750ml",
     "name": "Gaseosa 750ml",
     "price": 7,
-    "img": "/cafe_americano.jpg",
+    "img": "/images/gaseosa_750ml.jpg",
     "menu": [
       "lunch"
     ],

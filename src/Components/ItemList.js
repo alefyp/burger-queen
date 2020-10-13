@@ -14,7 +14,7 @@ const List = (props) => {
           <div className="list-items-description-container">
             <h4 className="list-items-name">{props.items[e].name}</h4>
             <p className="list-items-price">Precio: ${props.items[e].price} </p>
-            <p className="list-items-type"><span>{props.items[e].type[0]}</span></p>
+            {/* <p className="list-items-type"><span>{props.items[e].type[0]}</span></p> */}
           </div>
         </li>)
     }

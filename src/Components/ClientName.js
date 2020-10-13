@@ -6,9 +6,17 @@ const ClientName = (props) => {
       <label>
         Cliente:
         <input
-          type="text"
+          type="text" required
           name="name"
           placeholder="Juanito uwu" />
+
+      </label>
+      <label>
+        Comentarios:
+        <input
+          type="text"
+          name="comentarios"
+          placeholder="La hamburguesa sin cebolla!" />
       </label>
       <input className="send-client" type="submit" value=">" />
     </form>
