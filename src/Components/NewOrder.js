@@ -14,19 +14,18 @@ import Bill from './Bill';
 const NewOrder = () => {
 
   const [meal, setMeal] = useState("breakfast");
-  const [clientName, setClientName] = useState("Holongo");
-  const [clientOrder, setClientOrder] = useState({}); //aquí va la orden generada
+  const [clientName, setClientName] = useState("-- Por favor ingresa el nombre del cliente ---- ");
+  const [comments, setComments] = useState("-- Sin comentarios -- ");
 
+  const [clientOrder, setClientOrder] = useState({}); //aquí va la orden generada
 
   const addItem = (item, price) => {
     if (clientOrder[item]) {
       clientOrder[item].quantity += 1;
     } else {
       clientOrder[item] = { quantity: 1, price: price };
-
     }
     setClientOrder({ ...clientOrder });
-
   }
 
   const removeItem = (item) => {
@@ -42,19 +41,36 @@ const NewOrder = () => {
       <div className="new-order-add">
         <h2>- Nueva orden -</h2>
 
-        <ClientName name={clientName} />
+        <div className="client-name-form">
+          <label>
+            Cliente:
+        <input
+              type="text" required
+              name="name"
+              placeholder="Juanito uwu"
+              required
+              onChange={(e) => setClientName(e.target.value)} />
+          </label>
+          <label>
+            Comentarios:
+        <input
+              type="text" required
+              name="comments"
+              placeholder="La hamburguesa sin cebolla!"
+              onChange={(e) => setComments(e.target.value)} />
+          </label>
+        </div>
+
         <div className="new-order-meal-options">
           <button onClick={() => setMeal("breakfast")}>Desayuno</button>
           <button onClick={() => setMeal("lunch")}>Lunch</button>
         </div>
 
-
-
         <List items={items} meal={meal} addItem={addItem} />
 
       </div>
 
-      <Bill order={clientOrder} items={items} removeItem={removeItem} />
+      <Bill client={clientName} comments={comments} order={clientOrder} items={items} removeItem={removeItem} />
 
     </div>
   );

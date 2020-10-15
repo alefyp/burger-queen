@@ -12,7 +12,6 @@ import Wepa from './Wepa';
 import Chef from './Chef'
 
 const MenuBar = (props) => {
-  console.log(props.pathoptions)
 
   let { url } = useRouteMatch();
 

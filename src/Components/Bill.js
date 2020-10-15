@@ -5,9 +5,7 @@ const Bill = (props) => {
 
   const orderElements = Object.keys(props.order);
 
-
   const list = orderElements.map((e) => {
-    console.log(orderElements, props.order)
     return (
       <li key={e} className="bill-item">
         <div className="bill-item-name">
@@ -30,7 +28,7 @@ const Bill = (props) => {
 
   return (
     <div className="bill-container">
-      <p className="bill-client">Cliente: Alejandra</p>
+      <p className="bill-client">Cliente: {props.client}</p>
       <li key="title" className="bill-item">
         <div className="bill-item-name">
           <p>Item</p></div>
@@ -41,7 +39,8 @@ const Bill = (props) => {
       </li>
       <ul>{list}</ul>
       <h3 className="bill-total">Total: ${total}</h3>
-      <button>Enviar a la cocina!</button>
+      <p>{props.comments}</p>
+      <button className="bill-button">Enviar a la cocina!</button>
     </div>
 
   );

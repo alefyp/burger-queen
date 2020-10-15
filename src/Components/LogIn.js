@@ -1,14 +1,10 @@
 import React, { useState } from 'react';
 import '../css/Login.css';
-
 import { useHistory } from "react-router-dom";
-
-
 
 const LogIn = () => {
 
   let history = useHistory();
-
 
   function checkAuthentication(event) {
     event.preventDefault();
@@ -16,6 +12,7 @@ const LogIn = () => {
     console.log('soy un usuario: ', name);
     //get the mail and password
     //I guess the auth function starts here lol 
+
     history.push("/rol");
   }
 
