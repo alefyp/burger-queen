@@ -1,15 +1,11 @@
 import React from 'react';
 import '../css/MenuBar.css';
 import {
-  BrowserRouter as Router,
   useRouteMatch,
-  Switch,
-  Route,
   Link
 } from "react-router-dom";
 
-import Wepa from './Wepa';
-import Chef from './Chef'
+
 
 const MenuBar = (props) => {
 

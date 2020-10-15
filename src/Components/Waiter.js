@@ -5,12 +5,9 @@ import Wepa from './Wepa';
 import NewOrder from './NewOrder'
 
 import {
-  BrowserRouter as Router,
   useRouteMatch,
   Switch,
-  Route,
-  Link,
-  useParams
+  Route
 } from "react-router-dom";
 
 const Waiter = (props) => {

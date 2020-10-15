@@ -1,20 +1,16 @@
 import React from 'react';
 import '../css/NotFound.css';
-import MenuBar from './MenuBar';
-import Wepa from './Wepa';
+// import MenuBar from './MenuBar';
+// import Wepa from './Wepa';
 
-import {
-  BrowserRouter as Router,
-  useRouteMatch,
-  Switch,
-  Route,
-  Link,
-  useParams
-} from "react-router-dom";
+// import {
+//   BrowserRouter as Router,
+//   useRouteMatch
+// } from "react-router-dom";
 
 const Chef = () => {
 
-  let { url } = useRouteMatch();
+  // let { url } = useRouteMatch();
 
   return (
     <div className="main-view">

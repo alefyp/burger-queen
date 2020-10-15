@@ -5,7 +5,6 @@ import { useState } from 'react';
 import '../css/NewOrder.css';
 import items from '../items.json'; //Desde aquí mando el menu json file: items.json
 import List from './ItemList';
-import ClientName from './ClientName'
 import Bill from './Bill';
 
 // Este va a ser stateful y los hijos (ver menu) (factura)
