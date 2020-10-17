@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useLocation, useHistory } from 'react-router-dom';
 import db from '../firebaseConfig'
 
@@ -7,6 +7,9 @@ const Bill = (props) => {
 
   const location = useLocation();
   const history = useHistory();
+
+
+  const [orderUpdated, setOrderUpdated] = useState(false);
 
   const orderElements = Object.keys(props.order);
 
@@ -31,8 +34,6 @@ const Bill = (props) => {
     return prevTotal + props.order[key].quantity * props.order[key].price
   }, 0);
 
-
-
   const sendOrder = () => {
 
     const order = orderElements.map((key) => {
@@ -56,10 +57,22 @@ const Bill = (props) => {
 
     const data = { name: 'holonho' }
 
-    db.collection('orders').add(orderToKitchen).then(() => console.log("order subida!")).catch(console.error);
 
-    // history.go(0);
+    db.collection('orders').add(orderToKitchen).then(() => {
+      setOrderUpdated(true);
+      console.log("order updated!")
+    }).catch(console.error);
+
+
+
+    return (
+      <h1>Enviando orden!</h1>
+    )
   }
+
+  // if (order) {
+  //   history.go(0); //tengo que buscar la manera de que esto funcione unu
+  // }
 
   if (orderElements.length === 0) {
     return (
@@ -67,6 +80,11 @@ const Bill = (props) => {
         <h3>Añade items desde el menú para empezar una nueva orden!</h3>
       </div>
     )
+  } else if (orderUpdated) {
+    return (
+      <div className="bill-container">
+        <h3>Orden Enviada con éxito :D,  añade items desde el menú para empezar una nueva orden! </h3>
+      </div>)
   } else {
 
     return (
