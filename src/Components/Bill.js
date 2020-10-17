@@ -1,5 +1,6 @@
 import React from 'react';
 import { useLocation, useHistory } from 'react-router-dom';
+import db from '../firebaseConfig'
 
 
 const Bill = (props) => {
@@ -43,24 +44,22 @@ const Bill = (props) => {
 
     const orderToKitchen = {
       client: props.client,
-      order: order
+      order: order,
+      createdAt: new Date()
     }
 
     if (props.comments) {
       orderToKitchen.comments = props.comments;
     }
 
+    console.log(order, orderToKitchen)
 
+    const data = { name: 'holonho' }
 
-    console.log(location, history);
+    db.collection('orders').add(orderToKitchen).then(() => console.log("order subida!")).catch(console.error);
 
-    history.go(0);
+    // history.go(0);
   }
-
-
-
-
-
 
   if (orderElements.length === 0) {
     return (

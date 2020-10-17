@@ -1,8 +1,6 @@
 const functions = require('firebase-functions');
 const admin = require('firebase-admin');
 
-
-
 admin.initializeApp();
 const db = admin.firestore();
 admin.firestore().settings({ timestampsInSnapshots: true });
@@ -21,30 +19,21 @@ admin.firestore().settings({ timestampsInSnapshots: true });
 // );
 
 
-exports.date = functions.https.onRequest((req, res) => {
+exports.ordersApi = functions.https.onRequest((req, res) => {
   const orderRef = db.collection('orders');
-  orderRef.get().then(e => {
+  orderRef.get().then(docs => {
+    const ordenes = [];
 
-    const newObj = [];
+    docs.forEach(doc => ordenes.push({
+      doc: doc.id,
+      cliente: doc.data().client,
+      hora: doc.data().createdAt,
+      order: doc.data().order
 
-    e.data().forEach(doc => newObj.push({
-      id: doc,
-      name: "Alejandra"
-    }))
-    return res.send(newObj)
+    }));
+    return res.json({ orders: ordenes });
   }).catch(err => {
-    console.log(err)
+    return res.json({ error: err })
   });
+
 });
-
-
-
-//la idea es que no lleve auth
-//aquí van las otras uwu pero pues :v
-
-// exports.myFunction = functions.firestore
-//   .document('...')
-//   .onWrite((change, context) => { /* ... */ });
-
-//Eso que comenté viene de la documentación
-
