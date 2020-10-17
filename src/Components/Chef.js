@@ -1,7 +1,14 @@
 import React from 'react';
 import '../css/NotFound.css';
-// import MenuBar from './MenuBar';
-// import Wepa from './Wepa';
+import MenuBar from './MenuBar';
+import ActiveOrders from './ActiveOrders';
+
+import {
+  useRouteMatch,
+  Switch,
+  Route
+} from "react-router-dom";
+
 
 // import {
 //   BrowserRouter as Router,
@@ -10,11 +17,20 @@ import '../css/NotFound.css';
 
 const Chef = () => {
 
-  // let { url } = useRouteMatch();
+  let { url } = useRouteMatch();
 
   return (
     <div className="main-view">
-      <p>nada por ahora</p>
+      <MenuBar pathoptions={["activeorders", "orderslist"]} pathoptionsname={["Ordenes activas", "Estado General"]} employee={'Alejandra'} />
+
+      <Switch>
+        <Route path={`${url}/activeorders`}>
+          <ActiveOrders />
+        </Route>
+        <Route path={`${url}/orderlist`}>
+          <h1>Aquí irían todas las ordenes</h1>
+        </Route>
+      </Switch>
     </div>
   );
 }

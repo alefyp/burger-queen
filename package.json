@@ -35,6 +35,7 @@
     ]
   },
   "devDependencies": {
-    "eslint-plugin-promise": "^4.2.1"
+    "eslint-plugin-promise": "^4.2.1",
+    "react-test-renderer": "^16.14.0"
   }
 }

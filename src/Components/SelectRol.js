@@ -18,7 +18,7 @@ const SelectRol = () => {
       <ul className="rol-options-container">
         <li className="rol-option">
           <img src={chef} className="rol-option-img" alt="chef" />
-          <Link to={`${url}/chef`}>Cocinero</Link>
+          <Link to={`${url}/chef/activeorders`}>Cocinero</Link>
         </li>
         <li className="black" className="rol-option">
           <img src={waiter} className="rol-option-img" alt="waiter" />

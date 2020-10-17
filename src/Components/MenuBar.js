@@ -17,10 +17,10 @@ const MenuBar = (props) => {
         <h2>Burger Queen!</h2>
       </li>
       <li>
-        <Link to={`${url}/${props.pathoptions[0]}`}>Nueva orden</Link>
+        <Link to={`${url}/${props.pathoptions[0]}`}>{props.pathoptionsname[0]}</Link>
       </li>
       <li>
-        <Link to={`${url}/${props.pathoptions[1]}`}>Estado de pedidos</Link>
+        <Link to={`${url}/${props.pathoptions[1]}`}>{props.pathoptionsname[1]}</Link>
       </li>
       <li>
         <Link to="/rol">Cambiar Rol</Link>
@@ -31,8 +31,6 @@ const MenuBar = (props) => {
       <li>
         <Link to="/">Cerrar Sesión</Link>
       </li>
-
-
     </ul>
   );
 }

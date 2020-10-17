@@ -37,7 +37,6 @@ const LogIn = () => {
             name="name"
             autoComplete="name"
             placeholder="Alefy"
-            // separar
             required
             onChange={(e) => setName(e.target.value)}
           />
