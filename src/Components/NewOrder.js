@@ -14,7 +14,7 @@ const NewOrder = () => {
 
   const [meal, setMeal] = useState("breakfast");
   const [clientName, setClientName] = useState("-- Por favor ingresa el nombre del cliente ---- ");
-  const [comments, setComments] = useState("-- Sin comentarios -- ");
+  const [comments, setComments] = useState("");
 
   const [clientOrder, setClientOrder] = useState({}); //aquí va la orden generada
 

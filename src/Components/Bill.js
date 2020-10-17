@@ -1,6 +1,11 @@
 import React from 'react';
+import { useLocation, useHistory } from 'react-router-dom';
+
 
 const Bill = (props) => {
+
+  const location = useLocation();
+  const history = useHistory();
 
   const orderElements = Object.keys(props.order);
 
@@ -25,11 +30,35 @@ const Bill = (props) => {
     return prevTotal + props.order[key].quantity * props.order[key].price
   }, 0);
 
-  const isEmptyBill = (obj) => {
-    return !Object.keys(obj).length === 0;
+
+
+  const sendOrder = () => {
+
+    const order = orderElements.map((key) => {
+      return {
+        item: key,
+        cantidad: props.order[key].quantity
+      }
+    });
+
+    const orderToKitchen = {
+      client: props.client,
+      order: order
+    }
+
+    if (props.comments) {
+      orderToKitchen.comments = props.comments;
+    }
+
+
+
+    console.log(location, history);
+
+    history.go(0);
   }
 
-  console.log("the result is: ", isEmptyBill(orderElements));
+
+
 
 
 
@@ -55,7 +84,7 @@ const Bill = (props) => {
         <ul>{list}</ul>
         <h3 className="bill-total">Total: ${total}</h3>
         <p>{props.comments}</p>
-        <button className="bill-button">Enviar a la cocina!</button>
+        <button className="bill-button" onClick={(() => { sendOrder() })}>Enviar a la cocina!</button>
       </div>
 
     );
