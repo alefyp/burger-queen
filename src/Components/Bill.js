@@ -1,15 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { useLocation, useHistory } from 'react-router-dom';
 import db from '../firebaseConfig'
 
 
 const Bill = (props) => {
 
-  const location = useLocation();
-  const history = useHistory();
-
-
-  const [orderUpdated, setOrderUpdated] = useState(false);
+  console.log(props.orderSent);
 
   const orderElements = Object.keys(props.order);
 
@@ -53,26 +48,14 @@ const Bill = (props) => {
       orderToKitchen.comments = props.comments;
     }
 
-    console.log(order, orderToKitchen)
-
-    const data = { name: 'holonho' }
-
-
     db.collection('orders').add(orderToKitchen).then(() => {
-      setOrderUpdated(true);
-      console.log("order updated!")
+      props.orderSent({}); //reinicio el objeto en el parent para iniciar desde cero :D
+      props.clientSent("Por favor ingresa el nombre del cliente");
+      props.commentsSent("");
+      alert("order updated!");
     }).catch(console.error);
 
-
-
-    return (
-      <h1>Enviando orden!</h1>
-    )
   }
-
-  // if (order) {
-  //   history.go(0); //tengo que buscar la manera de que esto funcione unu
-  // }
 
   if (orderElements.length === 0) {
     return (
@@ -80,13 +63,7 @@ const Bill = (props) => {
         <h3>Añade items desde el menú para empezar una nueva orden!</h3>
       </div>
     )
-  } else if (orderUpdated) {
-    return (
-      <div className="bill-container">
-        <h3>Orden Enviada con éxito :D,  añade items desde el menú para empezar una nueva orden! </h3>
-      </div>)
   } else {
-
     return (
       <div className="bill-container">
         <p className="bill-client">Cliente: {props.client}</p>
@@ -103,7 +80,6 @@ const Bill = (props) => {
         <p>{props.comments}</p>
         <button className="bill-button" onClick={(() => { sendOrder() })}>Enviar a la cocina!</button>
       </div>
-
     );
   }
 }

@@ -13,10 +13,10 @@ import Bill from './Bill';
 const NewOrder = () => {
 
   const [meal, setMeal] = useState("breakfast");
-  const [clientName, setClientName] = useState("-- Por favor ingresa el nombre del cliente ---- ");
+  const [clientName, setClientName] = useState("Por favor ingresa el nombre del cliente");
   const [comments, setComments] = useState("");
-
   const [clientOrder, setClientOrder] = useState({}); //aquí va la orden generada
+
 
   const addItem = (item, price) => {
     if (clientOrder[item]) {
@@ -69,7 +69,16 @@ const NewOrder = () => {
 
       </div>
 
-      <Bill client={clientName} comments={comments} order={clientOrder} items={items} removeItem={removeItem} />
+      <Bill
+        client={clientName}
+        comments={comments}
+        order={clientOrder}
+        items={items}
+        removeItem={removeItem}
+        orderSent={setClientOrder}
+        clientSent={setClientName}
+        commentsSent={setComments}
+      />
 
     </div>
   );
