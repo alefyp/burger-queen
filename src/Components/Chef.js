@@ -1,5 +1,5 @@
 import React from 'react';
-import '../css/NotFound.css';
+import styles from '../css/Chef.module.css';
 import MenuBar from './MenuBar';
 import ActiveOrders from './ActiveOrders';
 
@@ -20,7 +20,7 @@ const Chef = () => {
   let { url } = useRouteMatch();
 
   return (
-    <div className="main-view">
+    <div className={styles.container}>
       <MenuBar pathoptions={["activeorders", "orderslist"]} pathoptionsname={["Ordenes activas", "Estado General"]} employee={'Alejandra'} />
 
       <Switch>
