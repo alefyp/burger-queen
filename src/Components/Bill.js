@@ -1,10 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import db from '../firebaseConfig'
 
-
 const Bill = (props) => {
-
-  console.log(props.orderSent);
 
   const orderElements = Object.keys(props.order);
 
@@ -48,11 +45,11 @@ const Bill = (props) => {
       orderToKitchen.comments = props.comments;
     }
 
-    db.collection('orders').add(orderToKitchen).then(() => {
+    db.collection('orders').add(orderToKitchen).then((e) => {
       props.orderSent({}); //reinicio el objeto en el parent para iniciar desde cero :D
       props.clientSent("Por favor ingresa el nombre del cliente");
       props.commentsSent("");
-      alert("order updated!");
+      alert("order updated!"); //No necesaria, ver si la cambio por un modal
     }).catch(console.error);
 
   }
@@ -60,9 +57,9 @@ const Bill = (props) => {
   if (orderElements.length === 0) {
     return (
       <div className="bill-container">
-        <h3>Añade items desde el menú para empezar una nueva orden!</h3>
+        <h3>Haz click en cualquier item de la carta para iniciar una nueva orden :)</h3>
       </div>
-    )
+    );
   } else {
     return (
       <div className="bill-container">

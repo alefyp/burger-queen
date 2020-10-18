@@ -21,19 +21,18 @@ admin.firestore().settings({ timestampsInSnapshots: true });
 
 exports.ordersApi = functions.https.onRequest((req, res) => {
   const orderRef = db.collection('orders');
-  orderRef.get().then(docs => {
+  res.set('Access-Control-Allow-Origin', '*');
+  orderRef.orderBy("createdAt", "asc").limit(10).get().then(docs => {
     const ordenes = [];
-
     docs.forEach(doc => ordenes.push({
       doc: doc.id,
       cliente: doc.data().client,
-      hora: doc.data().createdAt,
-      order: doc.data().order
-
+      hora: doc.data().createdAt.toDate(),
+      order: doc.data().order,
+      comment: doc.data().comments
     }));
     return res.json({ orders: ordenes });
   }).catch(err => {
     return res.json({ error: err })
   });
-
 });
