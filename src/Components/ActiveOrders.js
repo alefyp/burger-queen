@@ -28,6 +28,13 @@ const ActiveOrders = () => {
       <li className="black" key={order.doc}>
         <p>Cliente:{order.cliente}</p>
         <p>{order.comments}</p>
+        {
+          order.order.map((subitem, index) => {
+            return (
+              <p>{subitem.item}, {subitem.cantidad}</p>
+            )
+          })
+        }
 
         <p>{order.order[0].item} , {order.order[0].cantidad} </p>
         <p>{order.hora}</p>
