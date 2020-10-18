@@ -1,7 +1,6 @@
 import React from 'react';
-import '../css/NotFound.css';
+import styles from '../css/Waiter.module.css';
 import MenuBar from './MenuBar';
-import Wepa from './Wepa';
 import NewOrder from './NewOrder'
 
 import {
@@ -14,7 +13,7 @@ const Waiter = (props) => {
   let { url } = useRouteMatch();
 
   return (
-    <div className="main-view">
+    <div className={styles.container}>
       <MenuBar pathoptions={["Neworder", "Orderstate"]} pathoptionsname={["Nueva Orden", "Estado de pedidos"]} employee={'Alejandra'} />
 
       <Switch>

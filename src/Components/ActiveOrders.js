@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import db from '../firebaseConfig';
 
 const ActiveOrders = () => {
   const [error, setError] = useState(null);
@@ -20,8 +21,7 @@ const ActiveOrders = () => {
       )
   }, []); //Aquí termina el UseEffect
 
-
-
+  //esto puede ir enotro, no olvidar el prop al pasarlo
   const orderData = orders.map((order) => {
     console.log(order)
     return (
@@ -35,12 +35,20 @@ const ActiveOrders = () => {
             )
           })
         }
+        <p>Seg: {order.hora._seconds} Nanoseg:{order.hora._nanoseconds}  Es más fácil restar en unix</p>
+        <button>Terminado</button>
 
-        <p>{order.order[0].item} , {order.order[0].cantidad} </p>
-        <p>{order.hora}</p>
+        {/* aquí mandarle order.doc al botón */}
       </li>
     );
-  })
+  });
+
+  const mealFinished = () => {
+    db.collection('orders').doc('aquí va el id raro').update().then((e) => { //tengo que guardar el id del doc de cada orden
+      alert("meal updated!"); //No necesaria, ver si la cambio por un modal
+    }).catch(console.error);
+  }
+
 
   if (error) {
     return <div>Error: {error.message}</div>;
@@ -48,10 +56,13 @@ const ActiveOrders = () => {
     return <div>Cargando ordenes desde la api...</div>;
   } else {
     return (
-      <ul>
-        <h1>- Ordenes activas -</h1>
-        {orderData}
-      </ul>
+      <div>
+        <h2>- Pendientes -</h2>
+        <ul>
+          {orderData}
+        </ul>
+        <h2>- Terminados -</h2>
+      </div>
     );
   }
 }

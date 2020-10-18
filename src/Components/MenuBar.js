@@ -1,18 +1,16 @@
 import React from 'react';
-import '../css/MenuBar.css';
+import styles from '../css/MenuBar.module.css'
 import {
   useRouteMatch,
   Link
 } from "react-router-dom";
-
-
 
 const MenuBar = (props) => {
 
   let { url } = useRouteMatch();
 
   return (
-    <ul className="menu-bar">
+    <ul className={styles.container}>
       <li>
         <h2>Burger Queen!</h2>
       </li>

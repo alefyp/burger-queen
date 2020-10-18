@@ -27,7 +27,7 @@ exports.ordersApi = functions.https.onRequest((req, res) => {
     docs.forEach(doc => ordenes.push({
       doc: doc.id,
       cliente: doc.data().client,
-      hora: doc.data().createdAt.toDate(),
+      hora: doc.data().createdAt,
       order: doc.data().order,
       comment: doc.data().comments
     }));
@@ -36,3 +36,5 @@ exports.ordersApi = functions.https.onRequest((req, res) => {
     return res.json({ error: err })
   });
 });
+
+//me toca hacer otra funcion htttp request para actualizar la orden en la cocina y que sea solo el state

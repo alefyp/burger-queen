@@ -1,4 +1,4 @@
-.menu-bar{
+.container{
   display: flex;
   flex-direction: column;
   background-color: black;
@@ -10,23 +10,16 @@
   width: 10vw;
   color: rgb(250, 250, 250);
   padding: 2%;
-
 }
 
-.menu-bar h2{
+h2{
   width: 100%;
   padding: 5px;
   font-size: 2.5vw;
 }
 
-.menu-bar button{
+button{
   width: 100%;
-}
-
-.main-view{
-  height: 100vh;
-  width: 100%;
-  display: flex;
 }
 
 li, a{
@@ -37,7 +30,7 @@ li, a{
   text-align: center;
 }
 
-.menu-bar p{
+p{
   font-size: 18px;
 }
 
