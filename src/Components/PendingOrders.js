@@ -23,14 +23,11 @@ const ActiveOrders = () => {
       )
   }, []); //Aquí termina el UseEffect
 
-  //esto puede ir enotro, no olvidar el prop al pasarlo
-
   const mealFinished = () => {
     db.collection('orders').doc('aquí va el id raro').update().then((e) => { //tengo que guardar el id del doc de cada orden
       alert("meal updated!"); //No necesaria, ver si la cambio por un modal
     }).catch(console.error);
   }
-
 
   if (error) {
     return <div className={styles.container}>Error: {error.message}</div>;

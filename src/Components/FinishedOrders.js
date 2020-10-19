@@ -1,9 +1,11 @@
 import React from 'react';
-import style from '../css/FinishedOrders.module.css'
+import styles from '../css/FinishedOrders.module.css'
 
 const FinishedOrders = () => {
   return (
-    <h1>holongo</h1>
+    <div className={styles.container}>
+      <h3>últimas ordenes terminadas</h3>
+    </div>
   );
 }
 

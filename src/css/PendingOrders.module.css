@@ -1,11 +1,10 @@
 
 
 .container{
-  background-color: blueviolet;
   width: 65vw;
   height: 100vh;
   overflow: auto;
-  color: black;
+  padding: 2%;
 }
 
 .container h2{

@@ -1,3 +1,7 @@
-h1{
-  background-color: cornflowerblue;
+.container{
+  width: 45%;
+  display: flex;
+  background-color: darkgreen;
+  background-image: url('/background_collage.png');
+  background-color: rgba(7, 7, 7, 0.9);
 }
