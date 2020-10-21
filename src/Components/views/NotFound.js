@@ -1,9 +1,9 @@
 import React from 'react';
-import '../../css/NotFound.css';
+import styles from '../../css/NotFound.module.css';
 
 const NotFound = () => {
   return (
-    <div className="center-page">
+    <div className={styles.container}>
       <h1>Page not found!</h1>
     </div>
   );

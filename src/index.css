@@ -18,7 +18,6 @@ body {
   height: 100vh;
 }
 
-
 h1{
   font-family: 'Finger Paint', cursive;
   margin: 0;
@@ -32,13 +31,6 @@ p {
   font-size: 20px;
 }
 
-.flex-center{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  align-content: center;
-  justify-content: center;
-}
 
 ul, li{
   margin: 0;
