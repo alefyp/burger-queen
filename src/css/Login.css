@@ -7,7 +7,6 @@
   justify-content: center;
 }
 
-
 .LoginForm{
   display: flex;
   flex-direction: column;
@@ -25,7 +24,6 @@ input[type=text], input[type=password]{
   margin-top: 0.1em;
   border-radius: 5px;
 }
-
 
 label{
   margin-bottom: 1em;
@@ -48,9 +46,6 @@ button:hover{
   opacity: 1;
   box-shadow: 0px 0px 39px -15px rgba(0,0,0,0.4);
 }
-
-
-
 
 .LogIn p{
   font-size: 20px;

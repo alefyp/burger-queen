@@ -1,16 +1,10 @@
 import React from 'react';
-
 import { useState } from 'react';
-
 import '../css/NewOrder.css';
 import items from '../items.json'; //Desde aquí mando el menu json file: items.json
 import List from './ItemList';
 import Bill from './Bill';
-
 import Title from './Title'
-
-// Este va a ser stateful y los hijos (ver menu) (factura)
-// stateless para renderizar, vamsoa  intentarlo xD
 
 const NewOrder = () => {
 
@@ -18,7 +12,6 @@ const NewOrder = () => {
   const [clientName, setClientName] = useState("Por favor ingresa el nombre del cliente");
   const [comments, setComments] = useState("");
   const [clientOrder, setClientOrder] = useState({}); //aquí va la orden generada
-
 
   const addItem = (item, price) => {
     if (clientOrder[item]) {

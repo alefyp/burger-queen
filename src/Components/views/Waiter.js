@@ -1,7 +1,7 @@
 import React from 'react';
-import styles from '../css/Waiter.module.css';
-import MenuBar from './MenuBar';
-import NewOrder from './NewOrder'
+import styles from '../../css/Waiter.module.css';
+import MenuBar from '../MenuBar';
+import NewOrder from '../NewOrder'
 
 import {
   useRouteMatch,

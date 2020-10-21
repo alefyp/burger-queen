@@ -1,12 +1,6 @@
-
-
 .container{
   width: 65vw;
   height: 100vh;
   overflow: auto;
   padding: 2%;
-}
-
-.container h2{
-  background-color: crimson;
 }

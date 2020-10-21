@@ -1,7 +1,5 @@
 import React from 'react';
 import db from '../firebaseConfig'
-
-//componentes pequeños
 import Title from './Title';
 
 const Bill = (props) => {

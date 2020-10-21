@@ -1,8 +1,8 @@
 import React from 'react';
-import styles from '../css/Chef.module.css';
-import MenuBar from './MenuBar';
-import ActiveOrders from './ActiveOrders';
-import OrdersList from './OrderList';
+import styles from '../../css/Chef.module.css';
+import MenuBar from '../MenuBar';
+import ActiveOrders from '../ActiveOrders';
+
 
 import {
   useRouteMatch,
@@ -22,7 +22,7 @@ const Chef = () => {
         <Route path={`${url}/activeorders`}>
           <ActiveOrders />
         </Route>
-        <Route path={`${url}/orderSlist`}>
+        <Route path={`${url}/orderslist`}>
           <h1>Aquí va el estado general de las cosas</h1>
         </Route>
       </Switch>

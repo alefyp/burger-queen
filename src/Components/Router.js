@@ -4,17 +4,14 @@ import {
   Switch,
   Route
 } from "react-router-dom";
-import Home from './Home';
-import SelectRol from './SelectRol';
-import NotFound from './NotFound';
-import Waiter from './Waiter';
-import Chef from './Chef';
-
-
+import Home from './views/Home';
+import SelectRol from './views/SelectRol';
+import NotFound from './views/NotFound';
+import Waiter from './views/Waiter';
+import Chef from './views/Chef';
 
 const Routing = () => {
   //Aquí va mi código de autenticación
-
   return (
     <Router>
       <Switch>

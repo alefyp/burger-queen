@@ -3,10 +3,10 @@ import {
   useRouteMatch,
   Link
 } from 'react-router-dom';
-import '../css/SelectRol.css';
-import chef from '../media/chef.jpg';
-import waiter from '../media/waiter.jpg';
-import Title from './Title';
+import '../../css/SelectRol.css';
+import chef from '../../media/chef.jpg';
+import waiter from '../../media/waiter.jpg';
+import Title from '../Title';
 
 
 const SelectRol = () => {

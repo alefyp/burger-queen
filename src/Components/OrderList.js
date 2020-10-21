@@ -1,11 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import styles from '../css/OrderList.module.css';
 import db from '../firebaseConfig';
-import { ReactComponent as Clip } from '../media/clip.svg';
 import Subtitle from './Subtitle';
-
 import Title from './Title';
-
 
 const OrdersList = () => {
 
@@ -30,9 +27,7 @@ const OrdersList = () => {
   //El use effect pa traer la data real time
   useEffect(() => {
     db.collection("orders").where("state", "==", "taken").onSnapshot((querySnapshot) => {
-
       const totaldecosas = [];
-
       querySnapshot.forEach((doc) => {
         totaldecosas.push({
           client: doc.data().client,
@@ -43,9 +38,6 @@ const OrdersList = () => {
         })
         setIsLoaded(true);
       });
-
-      console.log(totaldecosas);
-
       setOrders(totaldecosas);
     });
   }, []);
@@ -55,9 +47,7 @@ const OrdersList = () => {
     orderId.update({
       state: "cooked",
       cookedAt: new Date()
-    }).catch((e) => console.error);
-
-    console.log(orderId);
+    });
   }
 
   const sortAscDate = (orders) => {
@@ -65,10 +55,8 @@ const OrdersList = () => {
     byDate.sort(function (a, b) {
       return a.createdAt - b.createdAt;
     });
-
     return byDate;
   }
-
 
   //la lista bien bonitica
 

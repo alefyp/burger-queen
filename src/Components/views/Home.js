@@ -1,7 +1,7 @@
 import React from 'react';
-import '../css/Home.css';
-import LogIn from './LogIn';
-import hamburger from '../media/employee-burger.jpg'
+import '../../css/Home.css';
+import LogIn from '../LogIn';
+import hamburger from '../../media/employee.jpg'
 
 const Home = () => {
   return (

@@ -12,4 +12,4 @@ const ActiveOrders = () => {
   );
 }
 
-export default ActiveOrders
+export default ActiveOrders;
