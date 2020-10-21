@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import db from '../firebaseConfig';
 import styles from '../css/PendingOrders.module.css';
-import PendingOrdersList from './PendingOrdersList'
+import PendingOrdersList from './PendingOrdersList';
+
+//lo tengo sin usar solo hice la api y vi que servía xd
 
 const ActiveOrders = () => {
   const [error, setError] = useState(null);

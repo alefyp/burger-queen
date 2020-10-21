@@ -1,6 +1,9 @@
 import React from 'react';
 import db from '../firebaseConfig'
 
+//componentes pequeños
+import Title from './Title';
+
 const Bill = (props) => {
 
   const orderElements = Object.keys(props.order);
@@ -58,7 +61,7 @@ const Bill = (props) => {
   if (orderElements.length === 0) {
     return (
       <div className="bill-container">
-        <h3>Haz click en cualquier item de la carta para iniciar una nueva orden :)</h3>
+        <Title text={"Haz click en cualquier item de la carta para iniciar una nueva orden :)"} color={"red"} />
       </div>
     );
   } else {

@@ -2,6 +2,10 @@ import React, { useState, useEffect } from 'react';
 import styles from '../css/OrderList.module.css';
 import db from '../firebaseConfig';
 import { ReactComponent as Clip } from '../media/clip.svg';
+import Subtitle from './Subtitle';
+
+import Title from './Title';
+
 
 const OrdersList = () => {
 
@@ -70,7 +74,7 @@ const OrdersList = () => {
 
   const pendingList = sortAscDate(orders).map((individualOrder, index) => {
     return (<li className={styles.target} key={index}>
-      <h3>Cliente: {individualOrder.client}</h3>
+      <Subtitle text={individualOrder.client} color={"black"} />
       <p>-------------------</p>
       <p>{individualOrder.comments}</p>
       {
@@ -103,7 +107,7 @@ const OrdersList = () => {
 
     return (
       <div className={styles.container}>
-        <h2>- A cocinar! -</h2>
+        <Title text={"- Pendientes -"} color={"black"} />
         <div className={styles.pendings}>{pendingList}</div>
       </div>
     );

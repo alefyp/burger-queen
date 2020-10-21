@@ -7,6 +7,8 @@ import items from '../items.json'; //Desde aquí mando el menu json file: items.
 import List from './ItemList';
 import Bill from './Bill';
 
+import Title from './Title'
+
 // Este va a ser stateful y los hijos (ver menu) (factura)
 // stateless para renderizar, vamsoa  intentarlo xD
 
@@ -38,7 +40,7 @@ const NewOrder = () => {
   return (
     <div className="new-order-container">
       <div className="new-order-add">
-        <h2>- Nueva orden -</h2>
+        <Title text={"- Nueva orden -"} color={"black"} />
 
         <form className="client-name-form">
           <label>

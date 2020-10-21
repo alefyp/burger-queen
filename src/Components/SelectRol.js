@@ -4,8 +4,9 @@ import {
   Link
 } from 'react-router-dom';
 import '../css/SelectRol.css';
-import chef from '../media/chef.jpg'
-import waiter from '../media/waiter.jpg'
+import chef from '../media/chef.jpg';
+import waiter from '../media/waiter.jpg';
+import Title from './Title';
 
 
 const SelectRol = () => {
@@ -14,7 +15,7 @@ const SelectRol = () => {
 
   return (
     <div className="Select-rol">
-      <h2>Selecciona tu rol:</h2>
+      <Title text={"Selecciona tu rol"} color={"black"} />
       <ul className="rol-options-container">
         <li key="owo" className="rol-option">
           <img src={chef} className="rol-option-img" alt="chef" />
