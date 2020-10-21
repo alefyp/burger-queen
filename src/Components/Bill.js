@@ -38,7 +38,9 @@ const Bill = (props) => {
     const orderToKitchen = {
       client: props.client,
       order: order,
-      createdAt: new Date()
+      createdAt: new Date(),
+      state: "taken", //lo voy a actualizar a tres estados: taken, cooked, served
+      total: total
     }
 
     if (props.comments) {
@@ -51,7 +53,6 @@ const Bill = (props) => {
       props.commentsSent("");
       alert("order updated!"); //No necesaria, ver si la cambio por un modal
     }).catch(console.error);
-
   }
 
   if (orderElements.length === 0) {

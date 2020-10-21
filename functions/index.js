@@ -18,23 +18,31 @@ admin.firestore().settings({ timestampsInSnapshots: true });
 //   user => admin.firestore().doc(`users/${user.uid}`).delete()
 // );
 
+//-- ordenes enviadas 1
+//--ordenes cocinadas 2
+//--ordenes servidas 3
 
 exports.ordersApi = functions.https.onRequest((req, res) => {
+
   const orderRef = db.collection('orders');
   res.set('Access-Control-Allow-Origin', '*');
-  orderRef.orderBy("createdAt", "asc").limit(10).get().then(docs => {
+
+  orderRef.orderBy("createdAt", "asc").get().then(docs => {
+
     const ordenes = [];
+
     docs.forEach(doc => ordenes.push({
       doc: doc.id,
       cliente: doc.data().client,
-      hora: doc.data().createdAt,
+      createdAt: doc.data().createdAt,
       order: doc.data().order,
-      comment: doc.data().comments
+      comments: doc.data().comments,
+      state: doc.data().state
     }));
+
     return res.json({ orders: ordenes });
   }).catch(err => {
     return res.json({ error: err })
   });
 });
 
-//me toca hacer otra funcion htttp request para actualizar la orden en la cocina y que sea solo el state

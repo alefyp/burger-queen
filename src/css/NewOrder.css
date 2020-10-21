@@ -102,15 +102,14 @@
 
 
 .new-order-meal-options button{
-  background-color: rgb(255, 38, 0);
+  /* background-color: rgb(255, 38, 0); */
   width: 20%;
   height: 100%;
-  border: none;
   border-radius: 0;
   margin-right: 1%;
   font-size: 24px;
   font-weight: 500;
-  border-radius: 5px 5px 0 0;
+  border: 1px solid gray;
   box-shadow: 0px 0px 39px -15px rgba(0,0,0,0.5);
   
 }

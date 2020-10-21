@@ -40,7 +40,7 @@ const NewOrder = () => {
       <div className="new-order-add">
         <h2>- Nueva orden -</h2>
 
-        <div className="client-name-form">
+        <form className="client-name-form">
           <label>
             Cliente:
         <input
@@ -58,7 +58,7 @@ const NewOrder = () => {
               placeholder="La hamburguesa sin cebolla!"
               onChange={(e) => setComments(e.target.value)} />
           </label>
-        </div>
+        </form>
 
         <div className="new-order-meal-options">
           <button onClick={() => setMeal("breakfast")}>Desayuno</button>

@@ -2,18 +2,13 @@ import React from 'react';
 import styles from '../css/Chef.module.css';
 import MenuBar from './MenuBar';
 import ActiveOrders from './ActiveOrders';
+import OrdersList from './OrderList';
 
 import {
   useRouteMatch,
   Switch,
   Route
 } from "react-router-dom";
-
-
-// import {
-//   BrowserRouter as Router,
-//   useRouteMatch
-// } from "react-router-dom";
 
 const Chef = () => {
 
@@ -27,8 +22,8 @@ const Chef = () => {
         <Route path={`${url}/activeorders`}>
           <ActiveOrders />
         </Route>
-        <Route path={`${url}/orderlist`}>
-          <h1>Aquí irían todas las ordenes</h1>
+        <Route path={`${url}/orderSlist`}>
+          <h1>Aquí va el estado general de las cosas</h1>
         </Route>
       </Switch>
     </div>

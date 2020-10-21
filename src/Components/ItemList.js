@@ -18,7 +18,7 @@ const List = (props) => {
     }
   });
 
-
+  //Creo que le puedo poner un condicional al botón if(props.class[e] exists){open modal y luego add Item}
   return (
     <ul className="list-items-container">{list}</ul>
   );

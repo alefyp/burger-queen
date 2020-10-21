@@ -3,6 +3,18 @@ import styles from '../css/PendingOrdersList.module.css';
 
 const PendingOrdersList = (props) => {
 
+  const dateFormater = (seconds) => {
+    const dateObject = new Date(seconds * 1000);
+    const humanDateFormat = dateObject.toDateString();
+    return humanDateFormat;
+  }
+
+  const timeFormater = (seconds) => {
+    const dateObject = new Date(seconds * 1000);
+    const humanTimeFormat = dateObject.toLocaleTimeString();
+    return humanTimeFormat;
+  }
+
   const orderData = props.orderApi.map((order) => {
     console.log(order)
     return (
@@ -19,12 +31,11 @@ const PendingOrdersList = (props) => {
                 <div>
                   <p>{subitem.cantidad}</p>
                 </div>
-
               </div>
             )
           })
         }
-        <p>Seg: {order.hora._seconds} Nanoseg:{order.hora._nanoseconds}  Es más fácil restar en unix</p>
+        <p>Hora Entrada: {timeFormater(order.createdAt._seconds)} {dateFormater(order.createdAt._seconds)}</p>
         <button className={styles.button}>Check!</button>
 
         {/* aquí mandarle order.doc al botón */}

@@ -23,6 +23,7 @@ const ActiveOrders = () => {
       )
   }, []); //Aquí termina el UseEffect
 
+
   const mealFinished = () => {
     db.collection('orders').doc('aquí va el id raro').update().then((e) => { //tengo que guardar el id del doc de cada orden
       alert("meal updated!"); //No necesaria, ver si la cambio por un modal

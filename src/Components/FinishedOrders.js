@@ -4,7 +4,7 @@ import styles from '../css/FinishedOrders.module.css'
 const FinishedOrders = () => {
   return (
     <div className={styles.container}>
-      <h3>últimas ordenes terminadas</h3>
+      <h2>- Listas pillas! - </h2>
     </div>
   );
 }
