@@ -4,7 +4,7 @@ import db from '../firebaseConfig';
 import Subtitle from './Subtitle';
 import Title from './Title';
 
-const OrdersList = () => {
+const OrderList = () => {
 
   //las funciones para que funcione la hora xd
   const dateFormater = (seconds) => {
@@ -35,7 +35,7 @@ const OrdersList = () => {
           order: doc.data().order,
           comments: doc.data().comments,
           id: doc.id
-        })
+        });
         setIsLoaded(true);
       });
       setOrders(totaldecosas);
@@ -46,7 +46,8 @@ const OrdersList = () => {
     const orderId = db.collection("orders").doc(id);
     orderId.update({
       state: "cooked",
-      cookedAt: new Date()
+      cookedAt: new Date(),
+      servedAt: "Pendiente",
     });
   }
 
@@ -63,8 +64,9 @@ const OrdersList = () => {
   const pendingList = sortAscDate(orders).map((individualOrder, index) => {
     return (<li className={styles.target} key={index}>
       <Subtitle text={individualOrder.client} color={"black"} />
+      <p>Código de orden: {individualOrder.id}</p>
       <p>-------------------</p>
-      <p>{individualOrder.comments}</p>
+
       {
         individualOrder.order.map((subitem, index) => {
           return (
@@ -79,6 +81,7 @@ const OrdersList = () => {
           )
         })
       }
+      <p>{individualOrder.comments}</p>
       <p>-------------------</p>
       <p className={styles.time}>Hora Entrada: {timeFormater(individualOrder.createdAt)} {dateFormater(individualOrder.createdAt)}</p>
       <button className={styles.button} onClick={() => { checkCookState(individualOrder.id) }}>Check!</button>
@@ -90,7 +93,6 @@ const OrdersList = () => {
   if (!isLoaded) {
     return <div className={styles.container}><h2>Esperando por ordenes uwu</h2></div>;
   } else {
-
     return (
       <div className={styles.container}>
         <Title text={"- Pendientes -"} color={"black"} />
@@ -101,4 +103,4 @@ const OrdersList = () => {
 }
 
 
-export default OrdersList;
+export default OrderList;

@@ -4,6 +4,7 @@ import {
   useRouteMatch,
   Link
 } from "react-router-dom";
+import Title from './Title';
 
 const MenuBar = (props) => {
 
@@ -12,7 +13,7 @@ const MenuBar = (props) => {
   return (
     <ul className={styles.container}>
       <li>
-        <h2>Burger Queen!</h2>
+        <Title text="Burger Queen!" />
       </li>
       <li>
         <Link to={`${url}/${props.pathoptions[0]}`}>{props.pathoptionsname[0]}</Link>

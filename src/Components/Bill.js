@@ -28,7 +28,6 @@ const Bill = (props) => {
   }, 0);
 
   const sendOrder = () => {
-
     const order = orderElements.map((key) => {
       return {
         item: key,
@@ -50,7 +49,7 @@ const Bill = (props) => {
 
     db.collection('orders').add(orderToKitchen).then((e) => {
       props.orderSent({}); //reinicio el objeto en el parent para iniciar desde cero :D
-      props.clientSent("Por favor ingresa el nombre del cliente");
+      props.clientSent("");
       props.commentsSent("");
       alert("order updated!"); //No necesaria, ver si la cambio por un modal
     }).catch(console.error);
@@ -59,7 +58,7 @@ const Bill = (props) => {
   if (orderElements.length === 0) {
     return (
       <div className="bill-container">
-        <Title text={"Haz click en cualquier item de la carta para iniciar una nueva orden :)"} color={"red"} />
+        <Title text={"Haz click en cualquier item de la carta para iniciar una nueva orden :)"} color={"white"} />
       </div>
     );
   } else {
