@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import '../css/Login.css';
 import { useHistory } from "react-router-dom";
+import Input from '../Components/Input';
 
 const LogIn = () => {
 
@@ -16,7 +17,7 @@ const LogIn = () => {
     history.push("/rol");
   }
 
-  const [recoverLink, setRecover] = useState(""); //cuando haga auth
+  const recoverLink = ""; //cuando haga auth
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
@@ -28,47 +29,9 @@ const LogIn = () => {
       </header>
 
       <form className="LoginForm" onSubmit={checkAuthentication}>
-        <label htmlFor="name">
-          Nombre:
-            <input
-            id="name"
-            value={name}
-            type="text"
-            name="name"
-            autoComplete="name"
-            placeholder="Alefy"
-            required
-            onChange={(e) => setName(e.target.value)}
-          />
-        </label>
-        <label htmlFor="email">
-          Correo electrónico:
-            <input
-            id="email"
-            value={email}
-            type="text"
-            name="Email"
-            autoComplete="username"
-            placeholder="example@gmail.com"
-
-            required
-            onChange={(e) => setEmail(e.target.value)}
-          />
-        </label>
-        <label htmlFor="password">
-          Contraseña:
-            <input
-            id="password"
-            value={password}
-            type="password"
-            name="password"
-            placeholder="******"
-            required
-            autoComplete="current-password"
-            onChange={(e) => setPassword(e.target.value)}
-          />
-
-        </label>
+        <Input name={name} label="Nombre:" type="text" placeholder="Alefy" handler={setName} />
+        <Input name={email} label="Correo electrónico" type="email" placeholder="example@example.com" handler={setEmail} />
+        <Input name={password} label="Contraseña:" type="password" placeholder="*****" handler={setPassword} />
         <button type="submit">Entrar</button>
       </form>
       <a href={recoverLink}>Olvidé mi contraseña </a>

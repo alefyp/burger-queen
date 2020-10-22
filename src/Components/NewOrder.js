@@ -5,11 +5,12 @@ import items from '../items.json'; //Desde aquí mando el menu json file: items.
 import List from './ItemList';
 import Bill from './Bill';
 import Title from './Title'
+import Input from './Input';
 
 const NewOrder = () => {
 
   const [meal, setMeal] = useState("breakfast");
-  const [clientName, setClientName] = useState("Por favor ingresa el nombre del cliente");
+  const [clientName, setClientName] = useState("");
   const [comments, setComments] = useState("");
   const [clientOrder, setClientOrder] = useState({}); //aquí va la orden generada
 
@@ -36,23 +37,8 @@ const NewOrder = () => {
         <Title text={"- Nueva orden -"} color={"black"} />
 
         <form className="client-name-form">
-          <label>
-            Cliente:
-        <input
-              type="text" required
-              name="name"
-              placeholder="Juanito uwu"
-              required
-              onChange={(e) => setClientName(e.target.value)} />
-          </label>
-          <label>
-            Comentarios:
-        <input
-              type="text" required
-              name="comments"
-              placeholder="La hamburguesa sin cebolla!"
-              onChange={(e) => setComments(e.target.value)} />
-          </label>
+          <Input name={clientName} label="Cliente" type="text" placeholder="Víctor" handler={setClientName} />
+          <Input name={comments} label="Comentarios:" type="text" placeholder="Hamburguesa sin cebolla!" handler={setComments} />
         </form>
 
         <div className="new-order-meal-options">

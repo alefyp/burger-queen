@@ -15,19 +15,6 @@
   margin: 5% 0;
 }
 
-input[type=text], input[type=password]{
-  border: solid 1px rgba(128, 128, 128, 0.342);
-  background-color: rgba(196, 196, 196, 0.466);
-  width: 100%;
-  font-size: 1em;
-  padding: 2%;
-  margin-top: 0.1em;
-  border-radius: 5px;
-}
-
-label{
-  margin-bottom: 1em;
-}
 
 button{
   background-color:red;

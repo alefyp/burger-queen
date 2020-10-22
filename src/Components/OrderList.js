@@ -20,7 +20,7 @@ const OrdersList = () => {
   }
 
   //los hookazos prih
-  const [error, setError] = useState(null); //onsnapshot no tiene catch (????)
+  //const [error, setError] = useState(null); //onsnapshot no tiene catch (????)
   const [isLoaded, setIsLoaded] = useState(false);
   const [orders, setOrders] = useState([]); //Recibo el objeto que hice, pero lo manejo con array
 
@@ -87,10 +87,8 @@ const OrdersList = () => {
 
   // renderizado condicional
 
-  if (error) {
-    return <div className={styles.container}>Error: {error.message}</div>;
-  } else if (!isLoaded) {
-    return <div className={styles.container}><h2>Aún no hay ordenes! uwu</h2></div>;
+  if (!isLoaded) {
+    return <div className={styles.container}><h2>Esperando por ordenes uwu</h2></div>;
   } else {
 
     return (
