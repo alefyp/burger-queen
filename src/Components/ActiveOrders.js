@@ -1,12 +1,12 @@
 import React from 'react';
 import FinishedOrders from './FinishedOrders';
 import style from '../css/ActiveOrders.module.css';
-import OrderList from './OrderList';
+import OrdersChef from './OrdersChef';
 
 const ActiveOrders = () => {
   return (
     <div className={style.container}>
-      <OrderList />
+      <OrdersChef />
       <FinishedOrders />
     </div>
   );

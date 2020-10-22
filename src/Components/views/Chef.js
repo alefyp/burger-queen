@@ -16,8 +16,7 @@ const Chef = () => {
 
   return (
     <div className={styles.container}>
-      <MenuBar pathoptions={["activeorders", "orderslist"]} pathoptionsname={["Ordenes activas", "Estado General"]} employee={'Alejandra'} />
-
+      <MenuBar pathoptions={["activeorders", "orderslist"]} pathoptionsname={["Ordenes activas", "Estado General"]} employee={'Chef/Cocina'} />
       <Switch>
         <Route path={`${url}/activeorders`}>
           <ActiveOrders />

@@ -47,7 +47,7 @@ const OrderList = () => {
     orderId.update({
       state: "cooked",
       cookedAt: new Date(),
-      servedAt: "Pendiente",
+      servedAt: "Pendiente"
     });
   }
 
