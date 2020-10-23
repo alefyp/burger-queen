@@ -36,7 +36,7 @@ const CheckListChef = () => {
     });
   }
 
-  const pendingList = sortAscDate(orders).map((individualOrder, index) => {
+  const PendingList = () => sortAscDate(orders).map((individualOrder, index) => {
     return (<li className={styles.target} key={index}>
       <Subtitle text={individualOrder.client} color={"black"} />
       <p>Código de orden: {individualOrder.id}</p>
@@ -71,7 +71,9 @@ const CheckListChef = () => {
     return (
       <div className={styles.container}>
         <Title text={"- Pendientes -"} color={"black"} />
-        <div className={styles.pendings}>{pendingList}</div>
+        <div className={styles.pendings}>
+          <PendingList />
+        </div>
       </div>
     );
   }
