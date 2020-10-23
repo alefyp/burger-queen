@@ -10,7 +10,7 @@ const FinishedOrders = (props) => {
   console.log(props.state);
 
   const [isLoaded, setIsLoaded] = useState(false);
-  const [orders, setOrders] = useState([]); //Recibo el objeto que hice, pero lo manejo con array
+  const [orders, setOrders] = useState([]);
 
   useEffect(() => {
     db.collection("orders").orderBy(props.state, "desc").limit(5).onSnapshot((querySnapshot) => {

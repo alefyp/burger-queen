@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import styles from '../css/CheckList.module.css';
 import db from '../firebaseConfig';
-import Subtitle from './Subtitle';
 import Title from './Title';
-import { timeFormater, dateFormater, sortAscDate } from './functions/dateHandler';
+import PendingList from './PendingList';
 
 const CheckListChef = () => {
 
@@ -36,33 +35,6 @@ const CheckListChef = () => {
     });
   }
 
-  const PendingList = () => sortAscDate(orders).map((individualOrder, index) => {
-    return (<li className={styles.target} key={index}>
-      <Subtitle text={individualOrder.client} color={"black"} />
-      <p>Código de orden: {individualOrder.id}</p>
-      <p>-------------------</p>
-
-      {
-        individualOrder.order.map((subitem, index) => {
-          return (
-            <div className={styles.items} key={index}>
-              <div className={styles.border}>
-                <p>{subitem.item}</p>
-              </div>
-              <div className={styles.border}>
-                <p>{subitem.cantidad}</p>
-              </div>
-            </div>
-          )
-        })
-      }
-      <p>{individualOrder.comments}</p>
-      <p>-------------------</p>
-      <p className={styles.time}>Hora Entrada: {timeFormater(individualOrder.createdAt)} {dateFormater(individualOrder.createdAt)}</p>
-      <button className={styles.button} onClick={() => { checkCookState(individualOrder.id) }}>Check!</button>
-    </li>)
-  });
-
   // renderizado condicional
 
   if (!isLoaded) {
@@ -71,9 +43,7 @@ const CheckListChef = () => {
     return (
       <div className={styles.container}>
         <Title text={"- Pendientes -"} color={"black"} />
-        <div className={styles.pendings}>
-          <PendingList />
-        </div>
+        <PendingList orders={orders} handler={checkCookState} />
       </div>
     );
   }
