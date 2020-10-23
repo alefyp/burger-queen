@@ -1,30 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import styles from '../css/OrderList.module.css';
+import styles from '../css/CheckList.module.css';
 import db from '../firebaseConfig';
 import Subtitle from './Subtitle';
 import Title from './Title';
+import { timeFormater, dateFormater, sortAscDate } from './functions/dateHandler';
 
-const OrderList = () => {
+const CheckListChef = () => {
 
-  //las funciones para que funcione la hora xd
-  const dateFormater = (seconds) => {
-    const dateObject = new Date(seconds * 1000);
-    const humanDateFormat = dateObject.toDateString();
-    return humanDateFormat;
-  }
-
-  const timeFormater = (seconds) => {
-    const dateObject = new Date(seconds * 1000);
-    const humanTimeFormat = dateObject.toLocaleTimeString();
-    return humanTimeFormat;
-  }
-
-  //los hookazos prih
-  //const [error, setError] = useState(null); //onsnapshot no tiene catch (????)
   const [isLoaded, setIsLoaded] = useState(false);
-  const [orders, setOrders] = useState([]); //Recibo el objeto que hice, pero lo manejo con array
+  const [orders, setOrders] = useState([]);
 
-  //El use effect pa traer la data real time
   useEffect(() => {
     db.collection("orders").where("state", "==", "taken").onSnapshot((querySnapshot) => {
       const totaldecosas = [];
@@ -50,16 +35,6 @@ const OrderList = () => {
       servedAt: "Pendiente"
     });
   }
-
-  const sortAscDate = (orders) => {
-    var byDate = orders.slice(0);
-    byDate.sort(function (a, b) {
-      return a.createdAt - b.createdAt;
-    });
-    return byDate;
-  }
-
-  //la lista bien bonitica
 
   const pendingList = sortAscDate(orders).map((individualOrder, index) => {
     return (<li className={styles.target} key={index}>
@@ -103,4 +78,4 @@ const OrderList = () => {
 }
 
 
-export default OrderList;
+export default CheckListChef;

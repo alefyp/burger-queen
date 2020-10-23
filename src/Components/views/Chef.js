@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from '../../css/Chef.module.css';
 import MenuBar from '../MenuBar';
-import ActiveOrders from '../ActiveOrders';
+import ActiveOrdersChef from '../ActiveOrdersChef';
 
 
 import {
@@ -19,7 +19,7 @@ const Chef = () => {
       <MenuBar pathoptions={["activeorders", "orderslist"]} pathoptionsname={["Ordenes activas", "Estado General"]} employee={'Chef/Cocina'} />
       <Switch>
         <Route path={`${url}/activeorders`}>
-          <ActiveOrders />
+          <ActiveOrdersChef />
         </Route>
         <Route path={`${url}/orderslist`}>
           <h1>Aquí va el estado general de las cosas</h1>

@@ -1,0 +1,20 @@
+.ul{
+  margin: 2%;
+}
+
+.li{
+  background-color: rgba(34, 34, 34, 0.5);
+  border: 1px solid rgba(128, 128, 128, 0.7);
+  margin: 2%;
+  padding-left: 2%;
+  text-align: left;
+  transition: 5s;
+}
+
+.li:first-child {
+  animation: fadein 1s ease-in;
+}
+
+.div{
+  border-bottom: 1px solid rgba(128, 128, 128, 0.7);
+}
