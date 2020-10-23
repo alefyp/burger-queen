@@ -26,7 +26,8 @@ const PendingList = (props) => {
       }
       <p>{individualOrder.comments}</p>
       <p>-------------------</p>
-      <p className={styles.time}>Hora Entrada: {timeFormater(individualOrder.createdAt)} {dateFormater(individualOrder.createdAt)}</p>
+      <p className={styles.time}>Hora Entrada {props.entrancy}: {timeFormater(individualOrder[props.entrancy])} {dateFormater(individualOrder[props.entrancy])}</p>
+
       <button className={styles.button} onClick={() => { props.handler(individualOrder.id) }}>Check!</button>
     </li>)
   });

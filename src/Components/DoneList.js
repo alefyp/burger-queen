@@ -6,6 +6,9 @@ const DoneList = (props) => {
   return (
     <ul className={styles.ul}>
       {props.orders.map((individualOrder, index) => {
+
+
+
         console.log();
         return (
           <li key={index} className={styles.li}>
@@ -16,7 +19,9 @@ const DoneList = (props) => {
             <p><span role="img">✔️</span> Código de orden: {individualOrder.id}</p>
             <p><span role="img">🍟</span> Salida de cocina: {timeFormater(individualOrder.cookedAt)} {dateFormater(individualOrder.cookedAt)}</p>
             <p><span role="img">⏲</span> Tiempo de preparación: {timeDifference(individualOrder.cookedAt, individualOrder.createdAt)}</p>
-            <p><span role="img">⏲ </span>Servicio a Mesa: {(individualOrder.servedAt === "Pendiente") ? individualOrder.servedAt : ` ${timeFormater(individualOrder.servedAt.seconds)} ${dateFormater(individualOrder.servedAt.seconds)} `}</p>
+            {individualOrder.servedAt !== undefined &&
+              <p><span role="img">✔️</span> Servido en Mesa: {timeFormater(individualOrder.servedAt)} {dateFormater(individualOrder.servedAt)}</p>
+            }
           </li>
         );
       })}

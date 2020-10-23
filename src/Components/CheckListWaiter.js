@@ -4,18 +4,18 @@ import db from '../firebaseConfig';
 import Title from './Title';
 import PendingList from './PendingList';
 
-const CheckListChef = () => {
+const CheckListWaiter = () => {
 
   const [isLoaded, setIsLoaded] = useState(false);
   const [orders, setOrders] = useState([]);
 
   useEffect(() => {
-    db.collection("orders").where("state", "==", "taken").onSnapshot((querySnapshot) => {
+    db.collection("orders").where("state", "==", "cooked").onSnapshot((querySnapshot) => {
       const totaldecosas = [];
       querySnapshot.forEach((doc) => {
         totaldecosas.push({
           client: doc.data().client,
-          createdAt: doc.data().createdAt.seconds,
+          cookedAt: doc.data().cookedAt.seconds,
           order: doc.data().order,
           comments: doc.data().comments,
           id: doc.id
@@ -26,11 +26,11 @@ const CheckListChef = () => {
     });
   }, []);
 
-  const checkCookState = (id) => {
+  const checkServedState = (id) => {
     const orderId = db.collection("orders").doc(id);
     orderId.update({
-      state: "cooked",
-      cookedAt: new Date()
+      state: "served",
+      servedAt: new Date()
     });
   }
 
@@ -44,12 +44,13 @@ const CheckListChef = () => {
   } else {
     return (
       <div className={styles.container}>
-        <Title text="Pendientes" color="black" />
-        <PendingList orders={orders} handler={checkCookState} entrancy="createdAt" />
+        <Title text="Pendientes por servir" color="black" />
+        <PendingList orders={orders} handler={checkServedState} entrancy="cookedAt" />
       </div>
     );
   }
 }
 
 
-export default CheckListChef;
+export default CheckListWaiter;
+
