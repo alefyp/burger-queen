@@ -4,7 +4,8 @@ import {
   useRouteMatch,
   Link
 } from "react-router-dom";
-import Title from './Title';
+import Subtitle from './Subtitle';
+import { ReactComponent as Logout } from '../media/logout.svg';
 
 const MenuBar = (props) => {
 
@@ -13,7 +14,7 @@ const MenuBar = (props) => {
   return (
     <ul className={styles.container}>
       <li>
-        <Title text="Burger Queen!" />
+        <Subtitle text="Burger Queen!" />
       </li>
       <li>
         <Link to={`${url}/${props.pathoptions[0]}`}>{props.pathoptionsname[0]}</Link>
@@ -28,7 +29,9 @@ const MenuBar = (props) => {
         <p>Activo como: <span>{props.employee}</span></p>
       </li>
       <li>
-        <Link to="/">Cerrar Sesión</Link>
+        <Link to="/">
+          <Logout /><br />
+          Cerrar Sesión</Link>
       </li>
     </ul>
   );
