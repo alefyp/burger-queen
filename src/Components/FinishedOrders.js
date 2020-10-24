@@ -1,13 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import styles from '../css/FinishedOrders.module.css';
 import db from '../firebaseConfig';
-import Title from './Title';
 import Subtitle from './Subtitle';
 import DoneList from './DoneList';
 
 const FinishedOrders = (props) => {
-
-  console.log(props.state);
 
   const [isLoaded, setIsLoaded] = useState(false);
   const [orders, setOrders] = useState([]);

@@ -22,7 +22,7 @@ const Chef = () => {
           <ActiveOrdersChef />
         </Route>
         <Route path={`${url}/orderslist`}>
-          <h1>Aquí va el estado general de las cosas</h1>
+          <h1>Aquí va el estado general de las cosas, para ver todos los datos que quedaron de las ordenes / historicos y eso</h1>
         </Route>
       </Switch>
     </div>

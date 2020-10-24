@@ -24,6 +24,7 @@ const CheckListWaiter = () => {
       });
       setOrders(totaldecosas);
     });
+
   }, []);
 
   const checkServedState = (id) => {

@@ -37,3 +37,25 @@ ul, li{
   padding: 0;
 }
 
+/* Aquí puedo un id root y hacer el condicoonal dee landscape */
+
+@media screen and (orientation: landscape) {
+  #root{
+    display: block;
+  }
+
+  #portrait{
+    display: none;
+  }
+}
+
+@media screen and (orientation: portrait) {
+  #root{
+    display: none;
+  }
+
+  #portrait{
+    display: block;
+  }
+}
+

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styles from '../css/CheckList.module.css';
 import db from '../firebaseConfig';
-import Title from './Title';
+import Subtitle from './Subtitle';
 import PendingList from './PendingList';
 
 const CheckListChef = () => {
@@ -24,6 +24,7 @@ const CheckListChef = () => {
       });
       setOrders(totaldecosas);
     });
+
   }, []);
 
   const checkCookState = (id) => {
@@ -39,12 +40,17 @@ const CheckListChef = () => {
   if (!isLoaded) {
     return (
       <div className={styles.container}>
-        <Title text="Esperando ordenes..." />
+        <Subtitle text="Esperando ordenes..." color="black" />
+      </div>);
+  } else if (orders.length === 0) {
+    return (
+      <div className={styles.container}>
+        <Subtitle text="All done! No hay ordenes pendientes... por ahora uwu" color="black" />
       </div>);
   } else {
     return (
       <div className={styles.container}>
-        <Title text="Pendientes" color="black" />
+        <Subtitle text="Pendientes por cocinar" color="black" />
         <PendingList orders={orders} handler={checkCookState} entrancy="createdAt" />
       </div>
     );

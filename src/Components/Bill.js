@@ -47,10 +47,12 @@ const Bill = (props) => {
       orderToKitchen.comments = props.comments;
     }
 
+    props.orderSent({}); //reinicio el objeto en el parent para iniciar desde cero :D
+    props.clientSent("");
+    props.commentsSent("");
+
     db.collection('orders').add(orderToKitchen).then((e) => {
-      props.orderSent({}); //reinicio el objeto en el parent para iniciar desde cero :D
-      props.clientSent("");
-      props.commentsSent("");
+
       alert("order updated!"); //No necesaria, ver si la cambio por un modal
     }).catch(console.error);
   }

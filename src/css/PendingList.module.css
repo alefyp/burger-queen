@@ -7,7 +7,6 @@
   align-items: flex-start;
 }
 
-
 .pending p{
   margin: 10px;
 }
@@ -17,7 +16,7 @@
   width: 48%;
   padding: 3% 2%;
   margin-bottom: 2%;
-  border: 1px solid rgba(128, 128, 128, 0.4);
+  border: 1px solid rgba(180, 180, 180, 0.2);
   color: rgb(17, 17, 17);
   border-radius: 5px;
   box-shadow: 0px 0px 39px -15px rgba(0,0,0,0.4);

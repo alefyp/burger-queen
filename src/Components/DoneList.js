@@ -16,11 +16,11 @@ const DoneList = (props) => {
               <p><span role="img">💁</span>Cliente: {individualOrder.client}</p>
             </div>
 
-            <p><span role="img">✔️</span> Código de orden: {individualOrder.id}</p>
-            <p><span role="img">🍟</span> Salida de cocina: {timeFormater(individualOrder.cookedAt)} {dateFormater(individualOrder.cookedAt)}</p>
-            <p><span role="img">⏲</span> Tiempo de preparación: {timeDifference(individualOrder.cookedAt, individualOrder.createdAt)}</p>
+            <p><span role="img" aria-label="check">✔️</span> Código de orden: {individualOrder.id}</p>
+            <p><span role="img" aria-label="french fries">🍟</span> Salida de cocina: {timeFormater(individualOrder.cookedAt)} {dateFormater(individualOrder.cookedAt)}</p>
+            <p><span role="img" aria-label="timer">⏲</span> Tiempo de preparación: {timeDifference(individualOrder.cookedAt, individualOrder.createdAt)}</p>
             {individualOrder.servedAt !== undefined &&
-              <p><span role="img">✔️</span> Servido en Mesa: {timeFormater(individualOrder.servedAt)} {dateFormater(individualOrder.servedAt)}</p>
+              <p className={styles.served}><span role="img" aria-label="check">✔️</span> Servido en Mesa: {timeFormater(individualOrder.servedAt)} {dateFormater(individualOrder.servedAt)}</p>
             }
           </li>
         );

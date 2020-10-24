@@ -7,13 +7,12 @@
   }
 }
 
-
 .container{
   width: 45%;
   display: flex;
   background-image: url('/background_collage.png');
   background-color: rgba(7, 7, 7, 0.9);
-  padding: 2% 1%;
+  padding: 4%;
   flex-direction: column;
   overflow: auto;
 }
