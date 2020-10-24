@@ -40,21 +40,21 @@ ul, li{
 /* Aquí puedo un id root y hacer el condicoonal dee landscape */
 
 @media screen and (orientation: landscape) {
-  #root{
+  #main{
     display: block;
   }
 
-  #portrait{
+  #helper{
     display: none;
   }
 }
 
 @media screen and (orientation: portrait) {
-  #root{
+  #main{
     display: none;
   }
 
-  #portrait{
+ #helper{
     display: block;
   }
 }
