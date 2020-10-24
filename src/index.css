@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Finger+Paint&family=Open+Sans&display=swap');
 
-
 *{
   box-sizing: border-box;
 }
@@ -28,9 +27,8 @@ h1{
 
 p {
   font-family: 'Open Sans', sans-serif;
-  font-size: 16px;
+  font-size: 20px;
 }
-
 
 ul, li{
   margin: 0;

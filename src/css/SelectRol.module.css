@@ -31,11 +31,11 @@
 
 .text{
   color:black;
-  text-decoration: underline;
 }
 
 .text:hover{
   font-weight: bold;
+  text-decoration: underline;
 }
 
 
