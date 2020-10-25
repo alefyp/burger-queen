@@ -29,7 +29,7 @@ const FinishedOrders = (props) => {
 
   if (!isLoaded) {
     return (<div className={styles.container}>
-      <Subtitle text="Esperando más ordenes listas :)" />
+      <Subtitle text="Cargando ordenes listas..." color="white" />
     </div>);
   } else {
     return (

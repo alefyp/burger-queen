@@ -2,14 +2,16 @@ import React from 'react';
 import { timeFormater, dateFormater, sortAscDate } from './functions/dateHandler';
 import styles from '../css/PendingList.module.css';
 import Subtitle from './Subtitle';
+import Button from './Button';
 
 const PendingList = (props) => {
 
   const list = sortAscDate(props.orders).map((individualOrder, index) => {
     return (<li className={styles.target} key={index}>
-      <Subtitle text={individualOrder.client} color={"black"} />
-      <p>Código de orden: {individualOrder.id}</p>
-      <p>-------------------</p>
+      <div className={styles.header}>
+        <Subtitle text={individualOrder.client} color="whitesmoke" />
+        <p>Código de orden: {individualOrder.id}</p>
+      </div>
       {
         individualOrder.order.map((subitem, index) => {
           return (
@@ -17,7 +19,7 @@ const PendingList = (props) => {
               <div className={styles.border}>
                 <p>{subitem.item}</p>
               </div>
-              <div className={styles.border}>
+              <div className={styles.border, styles.quantity}>
                 <p>{subitem.cantidad}</p>
               </div>
             </div>
@@ -28,7 +30,7 @@ const PendingList = (props) => {
       <p>-------------------</p>
       <p className={styles.time}>Hora Entrada {props.entrancy}: {timeFormater(individualOrder[props.entrancy])} {dateFormater(individualOrder[props.entrancy])}</p>
 
-      <button className={styles.button} onClick={() => { props.handler(individualOrder.id) }}>Check!</button>
+      <Button text="Check!" onClick={() => { props.handler(individualOrder.id) }} />
     </li>)
   });
 

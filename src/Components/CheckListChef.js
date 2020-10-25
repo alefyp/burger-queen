@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styles from '../css/CheckList.module.css';
 import db from '../firebaseConfig';
+import Title from './Title';
 import Subtitle from './Subtitle';
 import PendingList from './PendingList';
 
@@ -8,6 +9,9 @@ const CheckListChef = () => {
 
   const [isLoaded, setIsLoaded] = useState(false);
   const [orders, setOrders] = useState([]);
+
+  const totalPending = orders.length;
+
 
   useEffect(() => {
     db.collection("orders").where("state", "==", "taken").onSnapshot((querySnapshot) => {
@@ -50,7 +54,8 @@ const CheckListChef = () => {
   } else {
     return (
       <div className={styles.container}>
-        <Subtitle text="Pendientes por cocinar" color="black" />
+        <Title text={"Ordenes Activas"} color="black" />
+        <p>Pendientes por cocinar: {totalPending}</p>
         <PendingList orders={orders} handler={checkCookState} entrancy="createdAt" />
       </div>
     );

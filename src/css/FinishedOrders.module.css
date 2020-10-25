@@ -1,39 +1,9 @@
-@keyframes fadein {
-  from {
-    background-color: red;
-  }
-  to {
-    background-color: rgba(0, 0, 0, 0);
-  }
-}
-
 .container{
-  width: 45%;
+  width: 30%;
   display: flex;
-  background-image: url('/background_collage.png');
-  background-color: rgba(7, 7, 7, 0.9);
-  padding: 4%;
+  background-image: url('/background2.png');
+  background-color: rgba(14, 14, 14, 0.5);
+  padding: 2vw;
   flex-direction: column;
   overflow: auto;
-}
-
-.ul{
-  margin: 2%;
-}
-
-.li{
-  background-color: rgba(34, 34, 34, 0.5);
-  border: 1px solid rgba(128, 128, 128, 0.7);
-  margin: 2%;
-  padding-left: 2%;
-  text-align: left;
-  transition: 5s;
-}
-
-.li:first-child {
-  animation: fadein 1s ease-in;
-}
-
-.div{
-  border-bottom: 1px solid rgba(128, 128, 128, 0.7);
 }

@@ -9,6 +9,8 @@ const CheckListWaiter = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [orders, setOrders] = useState([]);
 
+  const totalPending = orders.length;
+
   useEffect(() => {
     db.collection("orders").where("state", "==", "cooked").onSnapshot((querySnapshot) => {
       const totaldecosas = [];
@@ -45,7 +47,8 @@ const CheckListWaiter = () => {
   } else {
     return (
       <div className={styles.container}>
-        <Title text="Pendientes por servir" color="black" />
+        <Title text={"Ordenes Activas"} color="black" />
+        <p>Pendientes por servir: {totalPending}</p>
         <PendingList orders={orders} handler={checkServedState} entrancy="cookedAt" />
       </div>
     );
