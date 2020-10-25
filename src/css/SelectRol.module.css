@@ -7,6 +7,11 @@
   align-content: center;
   align-items: center;
   color: black;
+  text-align: center;
+}
+
+.container li{
+  list-style: none;
 }
 
 .rol{
@@ -31,6 +36,7 @@
 
 .text{
   color:black;
+  
 }
 
 .text:hover{

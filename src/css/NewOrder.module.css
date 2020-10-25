@@ -1,4 +1,34 @@
-.new-order-container{
+.container{
+  display: flex;
+  flex-direction: row;
+  width: 90vw;
+}
+
+.addContainer{
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 0 2vw;
+}
+
+.form{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-content: flex-start;
+  width: 100%;
+  flex-wrap: nowrap;
+}
+
+.options{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: flex-start;
+}
+ 
+ /* .new-order-container{
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -59,8 +89,8 @@
   display: flex;
   flex-direction: column;
   text-align: left;
-  /* align-content: center; */
-  padding: 4%;
+   align-content: center; 
+   padding: 4%;
   justify-content: flex-end;
 }
 
@@ -73,9 +103,10 @@
   font-size: 16px;
 }
 
-/* .list-items-type span{
+ .list-items-type span{
   background-color: rgba(0, 0, 0, 0.589);
-} */
+} 
+
 
 .list-items-name{
   margin: 0;
@@ -98,7 +129,7 @@
 
 
 .new-order-meal-options button{
-  /* background-color: rgb(255, 38, 0); */
+  background-color: rgb(255, 38, 0);
   width: 20%;
   height: 100%;
   border-radius: 0;
@@ -137,7 +168,7 @@
   text-align: center;
 }
 
-/* AQUI VA TODA LA PARTE DE LA FACTURA */
+ AQUI VA TODA LA PARTE DE LA FACTURA 
 
 .bill-container{
   width: 45%;
@@ -223,4 +254,4 @@
 
 .bill-client{
   color: aliceblue;
-}
+}  */

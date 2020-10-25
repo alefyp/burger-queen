@@ -1,11 +1,12 @@
 import React from 'react';
 import { useState } from 'react';
-import '../css/NewOrder.css';
+import styles from '../css/NewOrder.module.css';
 import items from '../items.json'; //Desde aquí mando el menu json file: items.json
 import List from './ItemList';
 import Bill from './Bill';
 import Title from './Title'
 import Input from './Input';
+import Button from './Button';
 
 const NewOrder = () => {
 
@@ -32,18 +33,18 @@ const NewOrder = () => {
   }
 
   return (
-    <div className="new-order-container">
-      <div className="new-order-add">
-        <Title text={"- Nueva orden -"} color={"black"} />
+    <div className={styles.container}>
+      <div className={styles.addContainer}>
+        <Title text="- Nueva orden -" color="black" />
 
-        <form className="client-name-form">
+        <form className={styles.form}>
           <Input name={clientName} label="Cliente" type="text" placeholder="Víctor" handler={setClientName} />
           <Input name={comments} label="Comentarios:" type="text" placeholder="Hamburguesa sin cebolla!" handler={setComments} />
         </form>
 
-        <div className="new-order-meal-options">
-          <button onClick={() => setMeal("breakfast")}>Desayuno</button>
-          <button onClick={() => setMeal("lunch")}>Lunch</button>
+        <div className={styles.options}>
+          <Button onClick={() => setMeal("breakfast")} text="Desayuno" />
+          <Button onClick={() => setMeal("lunch")} text="Lunch" />
         </div>
 
         <List items={items} meal={meal} addItem={addItem} />
