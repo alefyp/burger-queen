@@ -1,6 +1,10 @@
 import React from 'react';
 import db from '../firebaseConfig'
 import Title from './Title';
+import Subtitle from './Subtitle';
+import styles from '../css/Bill.module.css';
+import { ReactComponent as Add } from '../media/add.svg';
+import Button from './Button';
 
 const Bill = (props) => {
 
@@ -8,17 +12,17 @@ const Bill = (props) => {
 
   const list = orderElements.map((e) => {
     return (
-      <li key={e} className="bill-item">
-        <div className="bill-item-name">
+      <li key={e} className={styles.li}>
+        <div className={styles.itemName}>
           <p>{e}</p>
         </div>
-        <div className="bill-item-quantity">
+        <div className={styles.esp}>
           <p> {props.order[e].quantity}</p>
         </div>
-        <div className="bill-item-semitotal">
+        <div className={styles.esp}>
           <p>${props.order[e].quantity * props.order[e].price}</p>
         </div>
-        <button className="bill-item-delete-button" onClick={(() => { props.removeItem(e) })}>x</button>
+        <button className={styles.delete} onClick={(() => { props.removeItem(e) })}>x</button>
       </li>
     )
   });
@@ -47,7 +51,7 @@ const Bill = (props) => {
       orderToKitchen.comments = props.comments;
     }
 
-    props.orderSent({}); //reinicio el objeto en el parent para iniciar desde cero :D
+    props.orderSent({}); //reseteo el estado desde arriba :D
     props.clientSent("");
     props.commentsSent("");
 
@@ -59,26 +63,30 @@ const Bill = (props) => {
 
   if (orderElements.length === 0) {
     return (
-      <div className="bill-container">
-        <Title text={"Haz click en cualquier item de la carta para iniciar una nueva orden :)"} color={"white"} />
+      <div className={styles.container}>
+        <Add />
+        <Subtitle text="Haz click en cualquier item de la carta para iniciar una nueva orden :)" color="white" />
       </div>
     );
   } else {
     return (
-      <div className="bill-container">
-        <p className="bill-client">Cliente: {props.client}</p>
-        <li key="title" className="bill-item">
-          <div className="bill-item-name">
-            <p>Item</p></div>
-          <div className="bill-item-quantity">
-            <p>Cant.</p></div>
-          <div className="bill-item-semitotal">
-            <p>Total</p></div>
-        </li>
-        <ul>{list}</ul>
-        <h3 className="bill-total">Total: ${total}</h3>
-        <p>{props.comments}</p>
-        <button className="bill-button" onClick={(() => { sendOrder() })}>Enviar a la cocina!</button>
+      <div className={styles.container}>
+        <p className={styles.total}>Cliente: {props.client}</p>
+
+        <ul className={styles.ul}>
+          <li key="title" className={styles.li}>
+            <div className={styles.itemName}>
+              <p>Item</p></div>
+            <div className={styles.esp}>
+              <p>Cant.</p></div>
+            <div className={styles.esp}>
+              <p>Total</p></div>
+          </li>
+          {list}
+        </ul>
+        <p className={styles.total}>Total: ${total} </p>
+        <p className={styles.total}>{props.comments}</p>
+        <Button onClick={(() => { sendOrder() })} text="Enviar a la cocina" />
       </div>
     );
   }

@@ -27,136 +27,6 @@
   width: 100%;
   justify-content: flex-start;
 }
- 
- /* .new-order-container{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  width: 90vw;
-  height: 100vh;
-}
-
-.new-order-add{
-  width: 65%;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: flex-start;
-  padding: 2%;
-}
-
-.img-item-order{
-  height:  70%;
-  width: 100%;
-  object-fit: cover;
-  border-radius: 5px 5px 0 0 ;
-}
-
-.list-items-container{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 100%;
-  height: 70%;
-  background-color: rgba(248, 248, 248, 0.068);
-  padding: 1%;
-  justify-content: flex-start;
-  align-content: flex-start;
-  border: 1px solid rgba(128, 128, 128, 0.15);
-  border-radius: 0 0 5px 5px;
-  box-shadow: 0px 0px 39px -15px rgba(0, 0, 0, 0.294);
-}
-
-.list-items{
-  display: flex;
-  flex-direction: column;
-  width: 23%;
-  height: 46.25%;
-  margin: 1%;
-  cursor: pointer;
-  border: 1px solid rgba(128, 128, 128, 0.452);
-  border-radius: 5px;
-  box-shadow: 10px 10px 35px -37px rgb(0, 0, 0);
-
-}
-
-.list-items-description-container{
-  width: 100%;
-  height: 30%;
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-   align-content: center; 
-   padding: 4%;
-  justify-content: flex-end;
-}
-
-.list-items-description-container p{
-  margin: 0;
-  padding: 0;
-}
-
-.list-items-price{
-  font-size: 16px;
-}
-
- .list-items-type span{
-  background-color: rgba(0, 0, 0, 0.589);
-} 
-
-
-.list-items-name{
-  margin: 0;
-  padding: 0;
-  font-size: 18px;
-  font-weight: bolder;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.356);
-  padding-bottom: 4%;
-}
-
-.new-order-meal-options{
-  height: 8%;
-  padding-top: 2%;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  align-content: flex-end;
-}
-
-
-.new-order-meal-options button{
-  background-color: rgb(255, 38, 0);
-  width: 20%;
-  height: 100%;
-  border-radius: 0;
-  margin-right: 1%;
-  font-size: 24px;
-  font-weight: 500;
-  border: 1px solid gray;
-  box-shadow: 0px 0px 39px -15px rgba(0,0,0,0.5);
-  
-}
-
-.client-name-form{
-  height: 10%;
-  display: flex;
-  width: 100%;
-  flex-direction: row;
-  align-content: center;
-  align-items: center;
-  justify-content: center;
-
-}
-
-.client-name-form label{
-  padding-right: 2%;
-  width: 50%;
-  font-size: 18px;
-}
 
 .send-client{
   background-color: rgba(255, 126, 126, 0.082);
@@ -167,6 +37,8 @@
   border-style: none;
   text-align: center;
 }
+
+/**
 
  AQUI VA TODA LA PARTE DE LA FACTURA 
 
