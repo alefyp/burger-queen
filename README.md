@@ -10,12 +10,13 @@ Single Page App / Responsive / Offline / Serverless / Firebase
 ## Ligthouse: 
 
 - Performance 90% Average 
-- PWA 95% Average
 - Accessibility 97% Average
 - Best Practices 92% Average
 
 
 <img width="640" src="LH.png" alt="Logo">
+
+Progressive Web App: ✅ Fast and Reliable ✅ Installable ✅ PWA Optimized
 
 ## Testing:
 
