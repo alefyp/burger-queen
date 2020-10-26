@@ -5,18 +5,14 @@
 BurgerQueen! is an App that allows waiters to take orders using a tablet / desktop to send them to the kitchen area in an efficient and orderly manner and vice versa. It's a single page app responsive and accesible that works offline both: frontend and backend.
 
 React / JavaScript (ES6 +) / HTML / CSS /
-Single Page App / Responsive / Offline / Serverless / Firebase
+Single Page App / Responsive / Progressive Web App / Offline / Serverless / Firebase
 
 ## Ligthouse: 
 
-- Performance 90% Average 
-- Accessibility 97% Average
-- Best Practices 92% Average
-
-
-<img width="640" src="LH.png" alt="Logo">
-
-Progressive Web App: ✅ Fast and Reliable ✅ Installable ✅ PWA Optimized
+- Performance 93% Avr
+- Best Practices 94% Avr
+- Accessibility 100% 
+- Progressive Web App: 100 / ✅ Fast and Reliable ✅ Installable ✅ PWA Optimized
 
 ## Testing:
 
