@@ -1,5 +1,5 @@
 <h1 align="center">
-	<img width="250" src="./BQreadme.png" alt="Chalk">
+	<img width="250" src="BQReadme.png" alt="Logo">
 </h1>
 
 BurgerQueen! is an App that allows waiters to take orders using a tablet / desktop to send them to the kitchen area in an efficient and orderly manner and vice versa. It's a single page app responsive and accesible that works offline both: frontend and backend.
