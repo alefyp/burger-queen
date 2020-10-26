@@ -1,11 +1,13 @@
-# <div style="text-align: center"><img src="./BQReadme.png" alt="drawing" width="200" /> </div>
+<h1 align="center">
+	<img width="250" src="BQreadme.png" alt="Chalk">
+</h1>
 
 BurgerQueen! is an App that allows waiters to take orders using a tablet / desktop to send them to the kitchen area in an efficient and orderly manner and vice versa. It's a single page app responsive and accesible that works offline both: frontend and backend.
 
-React / JavaScript (ES6 +), HTML and CSS
+React / JavaScript (ES6 +) / HTML / CSS /
 Single Page App / Responsive / Offline / Serverless / Firebase
 
-### Ligthouse: 
+## Ligthouse: 
 
 - Performance 80%* + 
 - PWA 95%* +
@@ -13,12 +15,12 @@ Single Page App / Responsive / Offline / Serverless / Firebase
 - Best Practices 92%* +
 Average*
 
-### Testing:
+## Testing:
 
 DOM testing with React Testing Library
 Coverage: xxxxx
 
-### UX / Histories
+## UX / Histories
 
 H1: 
 * [x] Write down customer name
