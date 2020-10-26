@@ -1,4 +1,4 @@
-# <img src="./BQReadme.png" alt="drawing" width="200" />
+# ![BurgerQueen Logo](BQReadme.png)
 
 BurgerQueen! is an App that allows waiters to take orders using a tablet / desktop to send them to the kitchen area in an efficient and orderly manner and vice versa. It's a single page app responsive and accesible that works offline both: frontend and backend.
 
