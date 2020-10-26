@@ -16,7 +16,7 @@ const Waiter = (props) => {
 
   return (
     <div className={styles.container}>
-      <MenuBar pathoptions={["Neworder", "ActiveOrders"]} pathoptionsname={["Nueva Orden", "Ordenes activas"]} employee={'Mesero/Mesas'} />
+      <MenuBar pathoptions={["Neworder", "ActiveOrders"]} pathoptionsname={["Nueva Orden", "Ordenes activas"]} employee={'Mesero'} />
 
       <Switch>
         <Route path={`${url}/Neworder`}>

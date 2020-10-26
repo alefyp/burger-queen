@@ -12,21 +12,24 @@ const CheckListWaiter = () => {
   const totalPending = orders.length;
 
   useEffect(() => {
-    db.collection("orders").where("state", "==", "cooked").onSnapshot((querySnapshot) => {
-      const totaldecosas = [];
-      querySnapshot.forEach((doc) => {
-        totaldecosas.push({
-          client: doc.data().client,
-          cookedAt: doc.data().cookedAt.seconds,
-          order: doc.data().order,
-          comments: doc.data().comments,
-          id: doc.id
+    const unsuscribe = () => {
+      db.collection("orders").where("state", "==", "cooked").onSnapshot((querySnapshot) => {
+        const totaldecosas = [];
+        querySnapshot.forEach((doc) => {
+          totaldecosas.push({
+            client: doc.data().client,
+            cookedAt: doc.data().cookedAt.seconds,
+            order: doc.data().order,
+            comments: doc.data().comments,
+            id: doc.id
+          });
+          setIsLoaded(true);
         });
-        setIsLoaded(true);
+        setOrders(totaldecosas);
       });
-      setOrders(totaldecosas);
-    });
 
+    }
+    unsuscribe();
   }, []);
 
   const checkServedState = (id) => {

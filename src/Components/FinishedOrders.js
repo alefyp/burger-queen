@@ -10,21 +10,24 @@ const FinishedOrders = (props) => {
   const [orders, setOrders] = useState([]);
 
   useEffect(() => {
-    db.collection("orders").orderBy(props.state, "desc").limit(5).onSnapshot((querySnapshot) => {
-      const totaldecosas = [];
-      querySnapshot.forEach((doc) => {
-        totaldecosas.push({
-          client: doc.data().client,
-          createdAt: doc.data().createdAt.seconds,
-          cookedAt: doc.data().cookedAt.seconds,
-          comments: doc.data().comments,
-          servedAt: doc.data().servedAt,
-          id: doc.id
+    const unsuscribe = () => {
+      db.collection("orders").orderBy(props.state, "desc").limit(5).onSnapshot((querySnapshot) => {
+        const totaldecosas = [];
+        querySnapshot.forEach((doc) => {
+          totaldecosas.push({
+            client: doc.data().client,
+            createdAt: doc.data().createdAt.seconds,
+            cookedAt: doc.data().cookedAt.seconds,
+            comments: doc.data().comments,
+            servedAt: doc.data().servedAt,
+            id: doc.id
+          });
+          setIsLoaded(true);
         });
-        setIsLoaded(true);
+        setOrders(totaldecosas);
       });
-      setOrders(totaldecosas);
-    });
+    }
+    unsuscribe();
   }, []);
 
   if (!isLoaded) {

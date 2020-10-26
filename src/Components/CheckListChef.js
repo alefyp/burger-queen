@@ -14,20 +14,23 @@ const CheckListChef = () => {
 
 
   useEffect(() => {
-    db.collection("orders").where("state", "==", "taken").onSnapshot((querySnapshot) => {
-      const totaldecosas = [];
-      querySnapshot.forEach((doc) => {
-        totaldecosas.push({
-          client: doc.data().client,
-          createdAt: doc.data().createdAt.seconds,
-          order: doc.data().order,
-          comments: doc.data().comments,
-          id: doc.id
+    const unsuscribe = () => {
+      db.collection("orders").where("state", "==", "taken").onSnapshot((querySnapshot) => {
+        const totaldecosas = [];
+        querySnapshot.forEach((doc) => {
+          totaldecosas.push({
+            client: doc.data().client,
+            createdAt: doc.data().createdAt.seconds,
+            order: doc.data().order,
+            comments: doc.data().comments,
+            id: doc.id
+          });
+          setIsLoaded(true);
         });
-        setIsLoaded(true);
+        setOrders(totaldecosas);
       });
-      setOrders(totaldecosas);
-    });
+    }
+    unsuscribe();
 
   }, []);
 

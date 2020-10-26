@@ -1,6 +1,5 @@
 import React from 'react';
-import db from '../firebaseConfig'
-import Title from './Title';
+import db from '../firebaseConfig';
 import Subtitle from './Subtitle';
 import styles from '../css/Bill.module.css';
 import { ReactComponent as Add } from '../media/add.svg';
