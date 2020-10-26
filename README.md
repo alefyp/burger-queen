@@ -1,4 +1,4 @@
-# Burger Queen
+# <img src="./BQReadme.png" alt="drawing" width="200" />
 
 BurgerQueen! is an App that allows waiters to take orders using a tablet / desktop to send them to the kitchen area in an efficient and orderly manner and vice versa. It's a single page app responsive and accesible that works offline both: frontend and backend.
 
@@ -7,10 +7,11 @@ Single Page App / Responsive / Offline / Serverless / Firebase
 
 ### Ligthouse: 
 
-- Performance 80% +
-- PWA 95% +
-- Accessibility 93% +
-- Best Practices 92% +
+- Performance 80%* + 
+- PWA 95%* +
+- Accessibility 93%* +
+- Best Practices 92%* +
+Average*
 
 ### Testing:
 
@@ -36,5 +37,5 @@ H3:
 * [x] See order list ready to serve.
 * [x] Mark orders that have been delivered.
 
-![me](https://raw.githubusercontent.com/Alefyyyy/BOG001-burger-queen/develop/yay.jpg)
+
 
