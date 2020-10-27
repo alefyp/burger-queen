@@ -3,6 +3,8 @@ import { timeDifference, timeFormater, dateFormater } from './functions/dateHand
 import styles from '../css/DoneList.module.css';
 
 const DoneList = (props) => {
+
+
   return (
     <ul className={styles.ul}>
       {props.orders.map((individualOrder, index) => {
@@ -17,7 +19,7 @@ const DoneList = (props) => {
             <p>Tiempo de preparación: {timeDifference(individualOrder.cookedAt, individualOrder.createdAt)}</p>
             {individualOrder.servedAt !== undefined &&
               <div className={styles.served}>
-                <p><span role="img" aria-label="check">✔️</span> Servido en Mesa: {timeFormater(individualOrder.servedAt)} {dateFormater(individualOrder.servedAt)}</p>
+                <p><span role="img" aria-label="check">✔️</span> Servido en Mesa: {timeFormater(individualOrder.servedAt.seconds)} {dateFormater(individualOrder.servedAt.seconds)}</p>
               </div>
 
             }

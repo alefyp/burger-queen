@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Matches Title Component Snapshot 1`] = `
+<h2
+  className="title"
+  style={
+    Object {
+      "color": undefined,
+    }
+  }
+>
+  Hello world!
+</h2>
+`;

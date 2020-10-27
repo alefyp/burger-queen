@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Matches Button Component Snapshot 1`] = `
+<button
+  className="button"
+  type="submit"
+>
+  Click me!
+</button>
+`;
