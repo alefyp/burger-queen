@@ -6,7 +6,3 @@ it("Matches Button Component Snapshot", () => {
   const tree = renderer.create(<Button type="submit" text="Click me!" />).toJSON();
   expect(tree).toMatchSnapshot();
 });
-
-
-
-
