@@ -1,0 +1,45 @@
+.container{
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  justify-content: space-around;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+  width: 10vw;
+  color: rgb(250, 250, 250);
+  padding: 2%;
+}
+
+.container li, .container a{
+  font-size: 20px;
+  color: white;
+  list-style: none;
+  text-decoration: none;
+  text-align: center;
+}
+
+.container a:hover{
+  font-weight: bold;
+}
+
+.container svg{
+  fill: white;
+  width: 30%;
+}
+
+.container svg:hover{
+  fill: gray;
+}
+
+
+@media only screen and (max-width: 1024px) {
+  .container li, .container a{
+    font-size: 16px;
+}
+}
+
+
+
+

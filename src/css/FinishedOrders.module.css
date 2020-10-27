@@ -1,0 +1,9 @@
+.container{
+  width: 30%;
+  display: flex;
+  background-image: url('/background2.png');
+  background-color: rgba(14, 14, 14, 0.5);
+  padding: 2vw;
+  flex-direction: column;
+  overflow: auto;
+}
