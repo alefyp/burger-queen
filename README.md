@@ -16,8 +16,7 @@ Single Page App / Responsive / Progressive Web App / Offline / Serverless / Fire
 
 ## Testing:
 
-DOM testing with React Testing Library
-Coverage: xxxxx
+Snapshots with React Test renderer & DOM testing with React Testing Library
 
 ## UX / Histories
 
