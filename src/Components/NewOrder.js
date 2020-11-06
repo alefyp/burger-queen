@@ -1,15 +1,14 @@
-import React from 'react';
-import { useState } from 'react';
-import styles from '../css/NewOrder.module.css';
-import items from '../items.json'; //Desde aquí mando el menu json file: items.json
-import List from './ItemList';
-import Bill from './Bill';
-import Title from './Title'
-import Input from './Input';
-import Button from './Button';
+import React from "react";
+import { useState } from "react";
+import styles from "../css/NewOrder.module.css";
+import items from "../items.json";
+import List from "./ItemList";
+import Bill from "./Bill";
+import Title from "./Title";
+import Input from "./Input";
+import Button from "./Button";
 
 const NewOrder = () => {
-
   const [meal, setMeal] = useState("breakfast");
   const [clientName, setClientName] = useState("");
   const [comments, setComments] = useState("");
@@ -22,7 +21,7 @@ const NewOrder = () => {
       clientOrder[item] = { quantity: 1, price: price };
     }
     setClientOrder({ ...clientOrder });
-  }
+  };
 
   const removeItem = (item) => {
     clientOrder[item].quantity = clientOrder[item].quantity - 1;
@@ -30,7 +29,7 @@ const NewOrder = () => {
       delete clientOrder[item];
     }
     setClientOrder({ ...clientOrder });
-  }
+  };
 
   return (
     <div className={styles.container}>
@@ -38,8 +37,20 @@ const NewOrder = () => {
         <Title text="- Nueva orden -" color="black" />
 
         <form className={styles.form}>
-          <Input name={clientName} label="Cliente" type="text" placeholder="Víctor" handler={setClientName} />
-          <Input name={comments} label="Comentarios:" type="text" placeholder="Hamburguesa sin cebolla!" handler={setComments} />
+          <Input
+            name={clientName}
+            label="Cliente"
+            type="text"
+            placeholder="Víctor"
+            handler={setClientName}
+          />
+          <Input
+            name={comments}
+            label="Comentarios:"
+            type="text"
+            placeholder="Hamburguesa sin cebolla!"
+            handler={setComments}
+          />
         </form>
 
         <div className={styles.options}>
@@ -48,7 +59,6 @@ const NewOrder = () => {
         </div>
 
         <List items={items} meal={meal} addItem={addItem} />
-
       </div>
 
       <Bill
@@ -61,12 +71,8 @@ const NewOrder = () => {
         clientSent={setClientName}
         commentsSent={setComments}
       />
-
     </div>
   );
-
-}
-
-
+};
 
 export default NewOrder;

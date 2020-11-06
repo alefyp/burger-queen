@@ -1,14 +1,12 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import Routing from './Components/Router';
-import Helper from './Components/Helper';
-import * as serviceWorker from './serviceWorker';
-
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import Routing from "./Components/Router";
+import Helper from "./Components/Helper";
+import * as serviceWorker from "./serviceWorker";
 
 ReactDOM.render(
   <React.StrictMode>
-
     <div id="main">
       <Routing />
     </div>
@@ -16,17 +14,11 @@ ReactDOM.render(
     <div id="helper">
       <Helper />
     </div>
-
-
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 
-
-
 serviceWorker.register();
-
-
 
 console.log(`
             ▄              ▄    
@@ -49,4 +41,4 @@ console.log(`
           ▀▄▄▄▄▄▄▀▀▀▒▒▒▒▒▄▄▀     
             ▀▀▀▀▀▀▀▀▀▀▀▀        
             
-            such react`)
+            such react`);
