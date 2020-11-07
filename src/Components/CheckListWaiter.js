@@ -22,6 +22,7 @@ const CheckListWaiter = () => {
               cookedAt: doc.data().cookedAt,
               order: doc.data().order,
               comments: doc.data().comments,
+              total: doc.data().total,
               id: doc.id,
             });
             setIsLoaded(true);

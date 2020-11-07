@@ -35,7 +35,9 @@ export const timeFormater2 = (milliseconds) => {
   minute = minute % 60;
   day = Math.floor(hour / 24);
   hour = hour % 24;
-  return `${hour} Horas: ${minute} Minutos: ${seconds} Segundos`;
+  return `${hour.toString().padStart(2, "0")}:${minute
+    .toString()
+    .padStart(2, "0")}:${seconds.toString().padStart(2, "0")} `;
 };
 
 export const timeDifference = (a, b) => {

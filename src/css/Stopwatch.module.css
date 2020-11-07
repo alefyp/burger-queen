@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+}
+
+.container div {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 0px 2px;
+  height: 100%;
+  background: linear-gradient(0deg, #726e6cad 50%, #353535 50%);
+}
+
+.container p {
+  margin: 10px 2px;
+}

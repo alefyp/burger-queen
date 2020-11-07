@@ -22,6 +22,7 @@ const FinishedOrders = (props) => {
               cookedAt: doc.data().cookedAt,
               comments: doc.data().comments,
               servedAt: doc.data().servedAt,
+              total: doc.data().total,
               id: doc.id,
             });
             setIsLoaded(true);

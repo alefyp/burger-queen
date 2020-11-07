@@ -11,12 +11,15 @@ import Stopwatch from "./Stopwatch";
 
 const PendingList = (props) => {
   const list = sortAscDate(props.orders).map((individualOrder, index) => {
+    console.log(individualOrder);
     return (
       <li className={styles.target} key={index}>
         <div className={styles.header}>
           <Subtitle text={individualOrder.client} color="whitesmoke" />
           <p>Código de orden: {individualOrder.id}</p>
+          <Stopwatch time={individualOrder[props.entrancy]} />
         </div>
+        {!individualOrder.cookedAt && <p>{individualOrder.comments}</p>}
         {individualOrder.order.map((subitem, index) => {
           return (
             <div className={styles.items} key={index}>
@@ -29,13 +32,16 @@ const PendingList = (props) => {
             </div>
           );
         })}
-        <p>{individualOrder.comments}</p>
-        <p>-------------------</p>
+        <br></br>
+
+        {individualOrder.cookedAt && (
+          <Subtitle text={"Total: $" + individualOrder.total} color="black" />
+        )}
         <p className={styles.time}>
-          Hora Entrada: {timeFormater(individualOrder[props.entrancy])}{" "}
+          Entrada: {timeFormater(individualOrder[props.entrancy])}{" "}
           {dateFormater(individualOrder[props.entrancy])}
         </p>
-        <Stopwatch time={individualOrder[props.entrancy]} />
+
         <Button
           text="Check!"
           onClick={() => {

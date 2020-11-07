@@ -1,17 +1,24 @@
-.button{
+.button {
   width: 200px;
-  color: rgb(240, 240, 240);
-  background-color: rgb(180, 0, 0);
+  border-radius: 5px;
+  background-color: #cc0000;
+  background-image: #ff0000;
+  background-image: linear-gradient(to bottom, #8d0000 0%, #8a1000 100%);
+  background-size: 300px;
+  background-repeat: no-repeat;
+  background-position: 0%;
+  -webkit-transition: background 300ms ease-in-out;
+  transition: background 300ms ease-in-out;
   cursor: pointer;
-  position: relative;
-  border: none;
+  height: 40px;
+  margin: 10px;
+  border-style: none;
+  border-radius: 0;
+  color: white;
   align-self: center;
-  font-size: 20px;
-  margin: 0.5em;
-  padding: 0.5em;
-  transition: all 0.25s ease;
+  font-size: 16px;
 }
-
-.button:hover{
-  background-color: rgb(68, 0, 0);
+.button:hover {
+  background-position: -200%;
+  transition: background 300ms ease-in-out;
 }
