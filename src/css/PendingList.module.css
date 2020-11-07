@@ -21,10 +21,6 @@
   padding-bottom: 1vw;
 }
 
-.target:hover {
-  box-shadow: 13px 13px 26px #ebebeb, -13px -13px 26px #ffffff;
-}
-
 .time {
   color: #160005;
   font-weight: bold;
