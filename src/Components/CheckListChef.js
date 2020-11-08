@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import styles from "../css/CheckList.module.css";
 import db from "../firebaseConfig";
 import Title from "./Title";
+import TitleWithBadge from "./TitleWithBadge";
 import Subtitle from "./Subtitle";
 import PendingList from "./PendingList";
 
@@ -46,23 +47,22 @@ const CheckListChef = () => {
   if (!isLoaded) {
     return (
       <div className={styles.container}>
-        <Subtitle text="Esperando ordenes..." color="black" />
+        <Title text="Esperando ordenes..." color="black" />
       </div>
     );
   } else if (orders.length === 0) {
     return (
       <div className={styles.container}>
-        <Subtitle
-          text="All done! No hay ordenes pendientes... por ahora uwu"
-          color="black"
-        />
+        <Title text="All done! No hay ordenes pendientes :)" color="black" />
       </div>
     );
   } else {
     return (
       <div className={styles.container}>
-        <Title text={"Ordenes Activas"} color="black" />
-        <p>Pendientes por cocinar: {totalPending}</p>
+        <TitleWithBadge
+          text="Ordenes Activas"
+          notificationData={totalPending}
+        />
         <PendingList
           orders={orders}
           handler={checkCookState}

@@ -1,0 +1,24 @@
+.container {
+  text-align: center;
+  position: relative;
+  margin: 5%;
+}
+
+.container h1 {
+  font-size: 3vw;
+}
+
+.notification {
+  position: absolute;
+  top: -12px;
+  right: 20vm;
+  background-color: rgba(212, 19, 13, 1);
+  color: #fff;
+  border-radius: 5px;
+  height: 3vh;
+  width: 3vh;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  text-align: center;
+  line-height: 3vh;
+}

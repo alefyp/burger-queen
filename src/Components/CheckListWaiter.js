@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import styles from "../css/CheckList.module.css";
 import db from "../firebaseConfig";
 import Title from "./Title";
+import TitleWithBadge from "./TitleWithBadge";
 import PendingList from "./PendingList";
 
 const CheckListWaiter = () => {
@@ -52,8 +53,11 @@ const CheckListWaiter = () => {
   } else {
     return (
       <div className={styles.container}>
-        <Title text={"Ordenes Activas"} color="black" />
-        <p>Pendientes por servir: {totalPending}</p>
+        <TitleWithBadge
+          text="Ordenes Activas"
+          notificationData={totalPending}
+        />
+
         <PendingList
           orders={orders}
           handler={checkServedState}
